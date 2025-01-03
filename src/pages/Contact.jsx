@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
+import "../styles/datepicker.css";
 import { Mail, Phone, MapPin } from 'lucide-react';
 
 export default function Contact() {
@@ -31,7 +32,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="h-[calc(100vh-4rem)] overflow-y-auto bg-white dark:bg-gray-900 pt-8">
+    <div className="h-[calc(100vh-4rem)] overflow-y-auto bg-gray-50 dark:bg-gray-900 pt-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="max-w-lg mx-auto lg:max-w-none">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">

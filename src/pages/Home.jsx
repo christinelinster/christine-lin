@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function Home() {
   return (
-    <div className="h-[calc(100vh-4rem)] flex items-center bg-gradient-to-br from-white to-gray-100 dark:from-gray-900 dark:to-gray-800">
+    <div className="h-[calc(100vh-4rem)] flex items-center bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 overflow-y-auto">
         <div className="text-center">
           <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white sm:text-5xl md:text-6xl">
