@@ -3,7 +3,7 @@ import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import "../styles/datepicker.css";
 import "../styles/contact.css";
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Github } from 'lucide-react';
 
 export default function Contact() {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -76,7 +76,7 @@ export default function Contact() {
                 <textarea
                   name="message"
                   id="message"
-                  rows={4}
+                  rows={2}
                   value={formData.message}
                   onChange={handleChange}
                   className="form-input"
@@ -112,15 +112,26 @@ export default function Contact() {
             <div className="contact-info-list">
               <div className="contact-info-item">
                 <Mail className="contact-info-icon" />
-                <span>contact@example.com</span>
+                <a href="mailto:lin.christine19@gmail.com" className="contact-link">
+                  lin.christine19@gmail.com
+                </a>
               </div>
               <div className="contact-info-item">
-                <Phone className="contact-info-icon" />
-                <span>+1 (555) 123-4567</span>
+                <Linkedin className="contact-info-icon" />
+                <a href="https://linkedin.com/in/christinelin19" target="_blank" rel="noopener noreferrer" className="contact-link">
+                  linkedin.com/in/christinelin19
+                </a>
               </div>
+              <div className="contact-info-item">
+                <Github className="contact-info-icon" />
+                <a href="https://github.com/christinelinster" target="_blank" rel="noopener noreferrer" className="contact-link">
+                  github.com/christinelinster
+                </a>
+              </div>
+
               <div className="contact-info-item">
                 <MapPin className="contact-info-icon" />
-                <span>San Francisco, CA</span>
+                <span>Toronto, ON</span>
               </div>
             </div>
           </div>

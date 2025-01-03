@@ -30,14 +30,13 @@
 }
 
 .contact-header {
- 
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 .contact-title {
   font-size: 1.875rem;
   font-weight: 800;
-  letter-spacing: -0.025em;
+  letter-spacing: 0.025em;
   color: #111827;
 }
 
@@ -92,7 +91,7 @@ textarea.form-input {
   display: block;
   width: 100%;
   padding: 0.5rem 0.75rem;
-  border-radius: 0.75rem !important;
+  border-radius: 0.5rem !important;
   border: 1px solid #d1d5db;
   background-color: #ffffff;
   color: #111827;
@@ -191,10 +190,25 @@ textarea.form-input:focus {
   color: #818cf8;
 }
 
-.contact-info-item span {
+.contact-info-item span,
+.contact-info-item .contact-link {
   color: #4b5563;
 }
 
-.dark .contact-info-item span {
+.contact-info-item .contact-link {
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-info-item .contact-link:hover {
+  color: #6366f1;
+}
+
+.dark .contact-info-item span,
+.dark .contact-info-item .contact-link {
   color: #d1d5db;
+}
+
+.dark .contact-info-item .contact-link:hover {
+  color: #818cf8;
 }
