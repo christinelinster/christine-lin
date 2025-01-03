@@ -35,6 +35,9 @@ export default function Contact() {
   return (
     <div className="contact-container">
       <div className="contact-content">
+        <div className="contact-header">
+          <h1 className="contact-title">Get In Touch</h1>
+        </div>
         <div className="contact-grid">
           <div>
             <form onSubmit={handleSubmit} className="space-y-6">
