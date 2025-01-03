@@ -7,7 +7,10 @@
   font-weight: 500;
   background-color: #e0e7ff;
   color: #4338ca;
-  transition: background-color 0.2s;
+  transition: all 0.2s;
+  cursor: pointer;
+  user-select: none;
+  border: 2px solid transparent;
 }
 
 .dark .skill-tag {
@@ -21,4 +24,19 @@
 
 .dark .skill-tag:hover {
   background-color: #4338ca;
+}
+
+.skill-tag.highlighted {
+  background-color: #c7d2fe;
+  border-color: #4338ca;
+}
+
+.dark .skill-tag.highlighted {
+  background-color: #4338ca;
+  border-color: #818cf8;
+}
+
+.skill-tag:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
 }
