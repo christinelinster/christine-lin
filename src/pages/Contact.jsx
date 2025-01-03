@@ -102,20 +102,20 @@ export default function Contact() {
                 </div>
               </form>
             </div>
-            <div className="bg-gray-800 dark:bg-gray-800 shadow-lg rounded-lg p-8">
-              <h3 className="text-xl font-bold text-white mb-6">Contact Information</h3>
+            <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Contact Information</h3>
               <div className="space-y-6">
                 <div className="flex items-center">
-                  <Mail className="h-6 w-6 text-indigo-400" />
-                  <span className="ml-3 text-gray-200">contact@example.com</span>
+                  <Mail className="h-6 w-6 text-indigo-600 dark:text-indigo-400" />
+                  <span className="ml-3 text-gray-700 dark:text-gray-200">contact@example.com</span>
                 </div>
                 <div className="flex items-center">
-                  <Phone className="h-6 w-6 text-indigo-400" />
-                  <span className="ml-3 text-gray-200">+1 (555) 123-4567</span>
+                  <Phone className="h-6 w-6 text-indigo-600 dark:text-indigo-400" />
+                  <span className="ml-3 text-gray-700 dark:text-gray-200">+1 (555) 123-4567</span>
                 </div>
                 <div className="flex items-center">
-                  <MapPin className="h-6 w-6 text-indigo-400" />
-                  <span className="ml-3 text-gray-200">123 Main St, City, Country</span>
+                  <MapPin className="h-6 w-6 text-indigo-600 dark:text-indigo-400" />
+                  <span className="ml-3 text-gray-700 dark:text-gray-200">123 Main St, City, Country</span>
                 </div>
               </div>
             </div>

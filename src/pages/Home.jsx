@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 
 export default function Home() {
   return (
-    <div className="h-[calc(100vh-4rem)] flex items-center bg-gradient-to-br from-gray-900 to-gray-800 dark:from-gray-900 dark:to-gray-800">
+    <div className="h-[calc(100vh-4rem)] flex items-center bg-gradient-to-br from-white to-gray-100 dark:from-gray-900 dark:to-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 overflow-y-auto">
         <div className="text-center">
-          <h1 className="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
+          <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white sm:text-5xl md:text-6xl">
             <span className="block">Hi, I'm</span>
-            <span className="block text-indigo-400">John Doe</span>
+            <span className="block text-indigo-600 dark:text-indigo-400">John Doe</span>
           </h1>
-          <p className="mt-3 max-w-md mx-auto text-base text-gray-300 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+          <p className="mt-3 max-w-md mx-auto text-base text-gray-600 dark:text-gray-300 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
             Full-stack developer passionate about creating beautiful and functional web applications.
           </p>
           <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
@@ -36,7 +36,7 @@ export default function Home() {
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-gray-300"
+              className="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-300"
             >
               <Github className="h-6 w-6" />
             </a>
@@ -44,13 +44,13 @@ export default function Home() {
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-gray-300"
+              className="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-300"
             >
               <Linkedin className="h-6 w-6" />
             </a>
             <a
               href="mailto:example@example.com"
-              className="text-gray-400 hover:text-gray-300"
+              className="text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-300"
             >
               <Mail className="h-6 w-6" />
             </a>
