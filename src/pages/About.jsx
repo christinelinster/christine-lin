@@ -2,6 +2,7 @@ import { Dumbbell, Camera, Music2, Code2, Laptop, BookOpen, Trophy, Snowflake, E
 import InterestCard from '../components/InterestCard';
 import SkillTag from '../components/SkillTag';
 import ExperienceRole from '../components/ExperienceRole';
+import '../styles/about.css';
 
 export default function About() {
   const hobbies = [
@@ -31,60 +32,56 @@ export default function About() {
   ];
 
   return (
-    <div className="h-[calc(100vh-4rem)] overflow-y-auto bg-gray-50 dark:bg-gray-900 pt-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="about-container">
+      <div className="about-content">
         <div>
-          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-            About Me
-          </h2>
-          <p className="mt-3 text-lg text-gray-500 dark:text-gray-300">
+          <h2 className="about-title">About Me</h2>
+          <p className="about-description">
             I'm a passionate developer with over 5 years of experience in building web applications.
             My journey in tech started when I built my first website, and I've been hooked ever since.
           </p>
 
-          <div className="mt-12 space-y-12">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Hobbies & Interests</h3>
-              <div className="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4">
-                {hobbies.map((hobby) => (
-                  <InterestCard key={hobby.name} Icon={hobby.icon} name={hobby.name} />
-                ))}
-              </div>
+          <div className="section">
+            <h3 className="section-title">Hobbies & Interests</h3>
+            <div className="hobbies-grid">
+              {hobbies.map((hobby) => (
+                <InterestCard key={hobby.name} Icon={hobby.icon} name={hobby.name} />
+              ))}
             </div>
+          </div>
 
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Skills</h3>
-              <div className="mt-6 flex flex-wrap gap-2">
-                {skills.map((skill) => (
-                  <SkillTag key={skill} name={skill} />
-                ))}
-              </div>
+          <div className="section">
+            <h3 className="section-title">Skills</h3>
+            <div className="skills-container">
+              {skills.map((skill) => (
+                <SkillTag key={skill} name={skill} />
+              ))}
             </div>
+          </div>
 
-            <div>
-              <div className="flex items-center justify-between">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Experience</h3>
-                <a 
-                  href="/resume.pdf" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors duration-200"
-                >
-                  <span className="text-sm mr-1">View Resume</span>
-                  <ExternalLink className="h-4 w-4" />
-                </a>
-              </div>
-              <dl className="mt-6 space-y-4">
-                {experiences.map((experience) => (
-                  <ExperienceRole
-                    key={experience.title}
-                    title={experience.title}
-                    company={experience.company}
-                    period={experience.period}
-                  />
-                ))}
-              </dl>
+          <div className="section">
+            <div className="experience-header">
+              <h3 className="section-title">Experience</h3>
+              <a 
+                href="/resume.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="resume-link"
+              >
+                <span className="resume-text">View Resume</span>
+                <ExternalLink className="h-4 w-4" />
+              </a>
             </div>
+            <dl className="experience-list">
+              {experiences.map((experience) => (
+                <ExperienceRole
+                  key={experience.title}
+                  title={experience.title}
+                  company={experience.company}
+                  period={experience.period}
+                />
+              ))}
+            </dl>
           </div>
         </div>
       </div>

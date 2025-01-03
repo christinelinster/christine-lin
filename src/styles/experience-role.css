@@ -1,0 +1,37 @@
+.experience-role {
+  background-color: #f3f4f6;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.dark .experience-role {
+  background-color: #1f2937;
+}
+
+.experience-role:hover {
+  background-color: #e0e7ff;
+}
+
+.dark .experience-role:hover {
+  background-color: rgba(79, 70, 229, 0.1);
+}
+
+.role-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #111827;
+}
+
+.dark .role-title {
+  color: #ffffff;
+}
+
+.role-company {
+  margin-top: 0.25rem;
+  color: #6b7280;
+}
+
+.dark .role-company {
+  color: #d1d5db;
+}

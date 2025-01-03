@@ -1,5 +1,6 @@
 import { Github, ExternalLink } from 'lucide-react';
 import Card from '../components/Card';
+import '../styles/projects.css';
 
 const projects = [
   {
@@ -30,18 +31,18 @@ const projects = [
 
 export default function Projects() {
   return (
-    <div className="h-[calc(100vh-4rem)] overflow-y-auto bg-white dark:bg-gray-900 pt-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center">
-          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+    <div className="projects-container">
+      <div className="projects-content">
+        <div className="projects-header">
+          <h2 className="projects-title">
             My Projects
           </h2>
-          <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 dark:text-gray-300 sm:mt-4">
+          <p className="projects-description">
             Here are some of my recent projects that showcase my skills and experience.
           </p>
         </div>
 
-        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="projects-grid">
           {projects.map((project) => (
             <Card key={project.title} project={project} />
           ))}

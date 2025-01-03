@@ -1,0 +1,24 @@
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.125rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background-color: #e0e7ff;
+  color: #4338ca;
+  transition: background-color 0.2s;
+}
+
+.dark .skill-tag {
+  background-color: #312e81;
+  color: #c7d2fe;
+}
+
+.skill-tag:hover {
+  background-color: #c7d2fe;
+}
+
+.dark .skill-tag:hover {
+  background-color: #4338ca;
+}
