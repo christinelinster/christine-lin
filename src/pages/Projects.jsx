@@ -1,5 +1,5 @@
 import { Github, ExternalLink } from 'lucide-react';
-import Card from '../components/Card';
+import ProjectCard from '../components/ProjectCard';
 import '../styles/projects.css';
 
 const projects = [
@@ -44,7 +44,7 @@ export default function Projects() {
 
         <div className="projects-grid">
           {projects.map((project) => (
-            <Card key={project.title} project={project} />
+            <ProjectCard key={project.title} project={project} />
           ))}
         </div>
       </div>

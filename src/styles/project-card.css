@@ -1,0 +1,113 @@
+.project-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #ffffff;
+  transition: colors 0.2s;
+}
+
+.dark .project-card {
+  background-color: #1f2937;
+}
+
+.project-image-container {
+  flex-shrink: 0;
+}
+
+.project-image {
+  height: 12rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-content {
+  flex: 1;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-details {
+  flex: 1;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.dark .project-title {
+  color: #ffffff;
+}
+
+.project-description {
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  color: #6b7280;
+}
+
+.dark .project-description {
+  color: #d1d5db;
+}
+
+.project-technologies {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.technology-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.125rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background-color: #e0e7ff;
+  color: #4f46e5;
+}
+
+.dark .technology-tag {
+  background-color: #312e81;
+  color: #e0e7ff;
+}
+
+.project-links {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  color: #4b5563;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.dark .project-link {
+  color: #d1d5db;
+}
+
+.project-link:hover {
+  color: #111827;
+}
+
+.dark .project-link:hover {
+  color: #ffffff;
+}
+
+.project-link-icon {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.project-link-text {
+  margin-left: 0.5rem;
+}

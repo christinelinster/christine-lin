@@ -7,7 +7,7 @@ export default function ExperienceRole({ title, company, period, description, sk
     if (highlightedSkill && id === `role-${highlightedSkill}`) {
       const element = document.getElementById(id);
       element?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
+    } 
   }, [highlightedSkill, id]);
 
   return (
