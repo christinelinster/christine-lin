@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import '../styles/experience-role.css';
 import SkillTag from './SkillTag';
+import '../styles/experience-role.css';
 
 export default function ExperienceRole({ title, company, period, description, skills, id, onSkillClick, highlightedSkill }) {
   useEffect(() => {
