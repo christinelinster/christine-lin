@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { Github, ExternalLink } from 'lucide-react';
 import SkillTag from './SkillTag';
 import '../styles/project-role.css';
@@ -6,31 +5,24 @@ import '../styles/project-role.css';
 export default function ProjectRole({ 
   title, 
   description, 
-  technologies, 
+  skills, 
   github, 
   live, 
   id, 
   onSkillClick, 
   highlightedSkill 
 }) {
-  useEffect(() => {
-    if (highlightedSkill && id === `project-${highlightedSkill}`) {
-      const element = document.getElementById(id);
-      element?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-  }, [highlightedSkill, id]);
-
   return (
-    <div id={id} className={`project-role ${highlightedSkill && technologies.includes(highlightedSkill) ? 'highlighted' : ''}`}>
+    <div id={id} className={`project-role ${highlightedSkill && skills.includes(highlightedSkill) ? 'highlighted' : ''}`}>
       <dt className="project-role-title">{title}</dt>
       <dd className="project-role-description">{description}</dd>
       <div className="project-role-skills">
-        {technologies.map((tech) => (
+        {skills.map((skill) => (
           <SkillTag
-            key={tech}
-            name={tech}
-            onClick={() => onSkillClick(tech)}
-            isHighlighted={tech === highlightedSkill}
+            key={skill}
+            name={skill}
+            onClick={() => onSkillClick(skill)}
+            isHighlighted={skill === highlightedSkill}
           />
         ))}
       </div>

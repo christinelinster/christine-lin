@@ -40,21 +40,21 @@ const projects = [
   {
     title: 'E-commerce Platform',
     description: 'A full-featured e-commerce platform built with React and Node.js',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+    skills: ['React', 'Node.js', 'MongoDB', 'Stripe'],
     github: 'https://github.com',
     live: 'https://example.com',
   },
   {
     title: 'Task Management App',
     description: 'A collaborative task management application with real-time updates',
-    technologies: ['React', 'Firebase', 'Tailwind CSS'],
+    skills: ['React', 'Firebase', 'Tailwind CSS'],
     github: 'https://github.com',
     live: 'https://example.com',
   },
   {
     title: 'Weather Dashboard',
     description: 'A weather dashboard with detailed forecasts and interactive maps',
-    technologies: ['React', 'OpenWeather API', 'Chart.js'],
+    skills: ['React', 'OpenWeather API', 'Chart.js'],
     github: 'https://github.com',
     live: 'https://example.com',
   },
@@ -65,12 +65,38 @@ export default function About() {
 
   const handleSkillClick = (skill) => {
     setHighlightedSkill(highlightedSkill === skill ? null : skill);
+
+    if (skill) {
+      // Find first experience or project with this skill
+      const firstExperience = experiences.find(exp => exp.skills.includes(skill));
+      const firstProject = projects.find(proj => proj.skills.includes(skill));
+
+      // Get the DOM elements
+      const experienceElement = firstExperience ? document.getElementById(`role-${firstExperience.skills[0]}`) : null;
+      const projectElement = firstProject ? document.getElementById(`project-${firstProject.skills[0]}`) : null;
+
+      // Scroll to whichever element appears first in the DOM
+      if (experienceElement && projectElement) {
+        const experienceRect = experienceElement.getBoundingClientRect();
+        const projectRect = projectElement.getBoundingClientRect();
+        
+        if (experienceRect.top <= projectRect.top) {
+          experienceElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          projectElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      } else if (experienceElement) {
+        experienceElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else if (projectElement) {
+        projectElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
   };
 
   // Update skills array to include all unique skills from both experiences and projects
   const allSkills = [...new Set([
     ...skills,
-    ...projects.flatMap(project => project.technologies),
+    ...projects.flatMap(project => project.skills),
     ...experiences.flatMap(experience => experience.skills)
   ])].sort();
 
@@ -80,7 +106,7 @@ export default function About() {
         <div>
           <h2 className="about-title">About Me</h2>
           <p className="about-description">
-            I'm a passionate developer with over 5 years of experience in building web applications.
+            I'm a passionate self- taught developer with over 5 years of experience in building web applications.
             My journey in tech started when I built my first website, and I've been hooked ever since.
           </p>
 
@@ -139,7 +165,7 @@ export default function About() {
               {projects.map((project) => (
                 <ProjectRole
                   key={project.title}
-                  id={`project-${project.technologies[0]}`}
+                  id={`project-${project.skills[0]}`}
                   {...project}
                   onSkillClick={handleSkillClick}
                   highlightedSkill={highlightedSkill}
