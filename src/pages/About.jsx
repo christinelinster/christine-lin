@@ -1,37 +1,56 @@
 import { useState } from 'react';
-import { Dumbbell, Camera, Music2, Code2, Laptop, BookOpen, Trophy, Snowflake, ExternalLink } from 'lucide-react';
-import InterestCard from '../components/InterestCard';
+import {ExternalLink } from 'lucide-react';
 import SkillTag from '../components/SkillTag';
 import ExperienceRole from '../components/ExperienceRole';
 import ProjectRole from '../components/ProjectRole';
 import '../styles/about.css';
 
-const hobbies = [
-  { icon: Trophy, name: 'Basketball' },
-  { icon: Dumbbell, name: 'Weightlifting' },
-  { icon: Snowflake, name: 'Snowboarding' },
-  { icon: Camera, name: 'Photography' },
-  { icon: Music2, name: 'Music' },
-  { icon: Code2, name: 'Coding' },
-  { icon: Laptop, name: 'Technology' },
-  { icon: BookOpen, name: 'Reading' },
-];
 
 const skills = ['React', 'JavaScript', 'Node.js', 'Python', 'AWS', 'Docker'];
 
+const certifications = [
+  {
+    title: 'The Complete 2024 Web Development Bootcamp',
+    issuer: 'Udemy',
+    date: 'Sep 2024'
+  },
+  {
+    title: 'Certified Scrum Product Owner',
+    issuer: 'Scrum Alliance',
+    date: 'Sep 2024'
+  },
+  {
+    title: 'Agile Project Management Certification',
+    issuer: 'Google',
+    date: 'Nov 2023'
+  },
+  {
+    title: 'The Complete SQL Bootcamp',
+    issuer: 'Udemy',
+    date: 'Feb 2024'
+  }
+];
+
 const experiences = [
   {
-    title: 'Senior Developer',
-    company: 'Tech Corp',
-    period: '2020 - Present',
-    description: 'Led the development of a high-performance e-commerce platform serving millions of users. Implemented microservices architecture and improved system reliability.',
+    title: 'Oracle Practice Lead',
+    company: 'RedIron Technologies',
+    period: '2021 - Present',
+    description: 'Spearheaded strategic initiatives to drive business growth, including defining partnership roadmaps, launching core products through joint go-to-market efforts, building revenue centers from the ground up, and fostering collaborative relationships to uncover opportunities, secure high-value deals, and enable scalable success.',
     skills: ['React', 'Node.js', 'AWS', 'Docker']
   },
   {
-    title: 'Full Stack Developer',
-    company: 'StartUp Inc',
-    period: '2018 - 2020',
-    description: 'Developed and maintained multiple web applications using modern JavaScript frameworks. Created RESTful APIs and implemented automated testing.',
+    title: 'Oracle Product Manager',
+    company: 'RedIron Technologies',
+    period: '2021 - Present',
+    description: 'Drove product strategy by analyzing Oracle\'s Xstore product and retailer pain points, crafting targeted value propositions and use cases, and refining positioning through customer interviews and market research. Led a successful pilot and rollout to 500+ stores while enhancing lead generation with SEO-optimized case study webpages showcasing project successes.',
+    skills: ['React', 'JavaScript', 'Python', 'Node.js']
+  },
+  {
+    title: 'Oracle Project Manager',
+    company: 'RedIron Technologies',
+    period: '2021 - Present',
+    description: 'Led agile sprint cycles and managed product roadmaps in JIRA to deliver a Progressive Web App to production. Spearheaded a company-wide KPI initiative by defining key metrics and implementing Smartsheet dashboards to drive alignment and foster a data-driven culture.',
     skills: ['React', 'JavaScript', 'Python', 'Node.js']
   }
 ];
@@ -79,7 +98,7 @@ export default function About() {
       if (experienceElement && projectElement) {
         const experienceRect = experienceElement.getBoundingClientRect();
         const projectRect = projectElement.getBoundingClientRect();
-        
+
         if (experienceRect.top <= projectRect.top) {
           experienceElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
         } else {
@@ -103,19 +122,40 @@ export default function About() {
   return (
     <div className="about-container">
       <div className="about-content">
-        <div>
-          <h2 className="about-title">About Me</h2>
-          <p className="about-description">
-            I'm a passionate self- taught developer with over 5 years of experience in building web applications.
-            My journey in tech started when I built my first website, and I've been hooked ever since.
-          </p>
-
-          <div className="section">
-            <h3 className="section-title">Hobbies & Interests</h3>
-            <div className="hobbies-grid">
-              {hobbies.map((hobby) => (
-                <InterestCard key={hobby.name} Icon={hobby.icon} name={hobby.name} />
-              ))}
+        <div className='about-grid'>
+          <div className="about-section">
+            <div className="about-flex">
+              <div className="about-main">
+                <h2 className="about-title">About Me</h2>
+                <div className="about-text">
+                  <p className="about-description">
+                    Hi! I'm a self-taught software engineer on a mission to turn curiosity into creation.
+                    While earning my business degree at Western University's Ivey Business School,
+                    I discovered my passion for tech during a hackathon where my team built Dose,
+                    a gamified medication reminder app that won "Best Green Hack" by TD. Though I lacked coding experience,
+                    the experience ignited a desire to build and create, not just strategize.
+                  </p>
+                  <p className="about-description">
+                    After years in tech strategy, my curiosity grew into action.
+                    I've since immersed myself in programming, learning to bring ideas to life through code.
+                    With a foundation in business strategy and a growing technical skillset, I'm passionate about solving problems,
+                    building impactful projects, and constantly learning to grow as a software engineer.
+                  </p>
+                </div>
+              </div>
+              <div className="certifications-section">
+                <h3 className="section-title">Certifications</h3>
+                <div className="certifications-list">
+                  {certifications.map((cert, index) => (
+                    <div key={index} className="certification-item">
+                      <h4 className="certification-title">{cert.title}</h4>
+                      <p className="certification-details">
+                        {cert.issuer} • {cert.date}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
 
@@ -123,9 +163,9 @@ export default function About() {
             <h3 className="section-title">Skills</h3>
             <div className="skills-container">
               {allSkills.map((skill) => (
-                <SkillTag 
-                  key={skill} 
-                  name={skill} 
+                <SkillTag
+                  key={skill}
+                  name={skill}
                   onClick={() => handleSkillClick(skill)}
                   isHighlighted={skill === highlightedSkill}
                 />
@@ -136,9 +176,9 @@ export default function About() {
           <div className="section">
             <div className="experience-header">
               <h3 className="section-title">Experience</h3>
-              <a 
-                href="/resume.pdf" 
-                target="_blank" 
+              <a
+                href="/resume.pdf"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="resume-link"
               >

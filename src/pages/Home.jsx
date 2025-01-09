@@ -12,7 +12,7 @@ export default function Home() {
             <span className="home-name">Christine Lin</span>
           </h1>
           <p className="home-description">
-            Full-stack developer passionate about creating beautiful and functional web applications.
+          Software Developer. Practice Lead. Lifelong Learner.
           </p>
           <div className="button-container">
             <div>
