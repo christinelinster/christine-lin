@@ -2,17 +2,20 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import '../styles/home.css';
 
+//Add typewriter effect to my name. 
+
 export default function Home() {
   return (
     <div className="home-container">
       <div className="home-content">
         <div className="text-center">
-          <h1 className="home-title">
-            <span className="block">Hi, I'm</span>
+          <h2 className="home-title">
+            <span className="block">Hello, I'm</span>
             <span className="home-name">Christine Lin</span>
-          </h1>
+          </h2>
+    
           <p className="home-description">
-          Software Developer. Practice Lead. Lifelong Learner.
+          Software Developer. Practice Lead. Lifelong Student.
           </p>
           <div className="button-container">
             <div>

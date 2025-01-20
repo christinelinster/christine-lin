@@ -5,6 +5,12 @@
   transition: all 0.3s ease;
   border: 2px solid transparent;
   margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-role-content{
+  flex:1;
 }
 
 .dark .project-role {
