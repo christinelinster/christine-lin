@@ -48,16 +48,16 @@ export default function Navbar() {
           </div>
 
           {/* Mobile menu button */}
-          <div className="flex items-center sm:hidden space-x-2">
+          <div className="mobile-menu-button">
             <button
               onClick={toggleDarkMode}
-              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
+              className="theme-toggle"
               aria-label="Toggle dark mode"
             >
               {isDarkMode ? (
-                <Sun className="h-5 w-5 text-gray-700 dark:text-gray-200" />
+                <Sun className="theme-icon" />
               ) : (
-                <Moon className="h-5 w-5 text-gray-700 dark:text-gray-200" />
+                <Moon className="theme-icon" />
               )}
             </button>
             <button
@@ -75,8 +75,8 @@ export default function Navbar() {
 
         {/* Mobile menu */}
         {isOpen && (
-          <div className="sm:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1">
+          <div className="mobile-menu">
+            <div className="mobile-nav-links">
               {navItems.map((item) => (
                 <Link
                   key={item.path}
@@ -87,13 +87,7 @@ export default function Navbar() {
                   {item.label}
                 </Link>
               ))}
-              <button onClick={toggleDarkMode} className="theme-toggle">
-                {isDarkMode ? (
-                  <Sun className="theme-icon" />
-                ) : (
-                  <Moon className="theme-icon" />
-                )}
-              </button>
+
             </div>
           </div>
         )}

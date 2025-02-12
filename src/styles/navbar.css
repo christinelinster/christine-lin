@@ -2,9 +2,8 @@
   position: fixed;
   width: 100%;
   z-index: 50;
-  transition: colors 0.2s;
   background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(15px);
   border-bottom: 1px solid #e5e7eb;
 }
 
