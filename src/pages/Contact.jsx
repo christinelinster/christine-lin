@@ -16,7 +16,14 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission
+    const { name, email, message} = formData;
+    const meetingDate = selectedDate.toLocaleDateString();
+    const subject = encodeURIComponent(`New Message from ${name}`);
+    const body = encodeURIComponent(`Name: ${name}\n\nEmail: ${email}\n\nRequested Date: ${meetingDate}\n\nMessage: ${message}`);
+
+    window.location.href = `mailto:lin.christine19@gmail.com?subject=${subject}&body=${body}`;
     console.log({ ...formData, meetingDate: selectedDate });
+
   };
 
   const handleChange = (e) => {
@@ -93,7 +100,7 @@ export default function Contact() {
                   filterDate={isWeekday}
                   minDate={new Date()}
                   className="form-input"
-                  placeholderText="Select a weekday"
+                  placeholderText="Select a day"
                 />
               </div>
               <div>

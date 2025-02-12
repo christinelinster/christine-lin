@@ -31,7 +31,7 @@ export default function Home() {
                 .typeString("Practice Lead | ")
                 .changeDelay(50)
                 .pauseFor(300)
-                .typeString(" Lifelong Student")
+                .typeString(" Lifelong Student ")
                 .pauseFor(3000)
                 .deleteAll()
                 .start()
