@@ -2,11 +2,11 @@
   height: calc(100vh - 4rem);
   display: flex;
   align-items: center;
-  background-image: linear-gradient(to bottom right, #f9fafb, #f3f4f6);
+  background-color: linear-gradient(to bottom right, #f9fafb, #f3f4f6);
 }
 
 .dark .home-container {
-  background-image: linear-gradient(to bottom right, #111827, #111827);
+  background-image: #111827;
 }
 
 .home-content {
