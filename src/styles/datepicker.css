@@ -51,6 +51,10 @@
   background-color: #4f46e5;
 }
 
+:root[class~="dark"] .react-datepicker__day--today{
+  background-color: #6366f1
+}
+
 :root[class~="dark"] .react-datepicker__day--disabled {
   color: #6b7280;
 }
@@ -58,4 +62,5 @@
 :root[class~="dark"] .react-datepicker__day--selected {
   background-color: #6366f1 !important;
   color: white !important;
+  
 }
