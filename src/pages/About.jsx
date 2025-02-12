@@ -3,98 +3,12 @@ import { ExternalLink } from "lucide-react";
 import SkillTag from "../components/SkillTag";
 import ExperienceRole from "../components/ExperienceRole";
 import ProjectRole from "../components/ProjectRole";
+import projects from "../data/projects"
+import experiences from "../data/experiences";
+import certifications from "../data/certifications";
 import "../styles/about.css";
 
-//update the certifictions div to match the contact page div for contact information
-//update links
-
-const skills = ["React", "JavaScript", "Node.js", "Python", "AWS", "Docker"];
-
-const certifications = [
-  {
-    title: "Kubernetes for the Absolute Beginner",
-    issuer: "Udemy",
-    date: "Nov 2024",
-    link: "kubernetes.pdf"
-  },
-  {
-    title: "The Complete 2024 Web Development Bootcamp",
-    issuer: "Udemy",
-    date: "Sep 2024",
-    link: "webdev.pdf"
-  },
-  {
-    title: "Certified Scrum Product Owner",
-    issuer: "Scrum Alliance",
-    date: "Sep 2024",
-    link: "cspo.pdf"
-  },
-  {
-    title: "The Complete SQL Bootcamp",
-    issuer: "Udemy",
-    date: "Feb 2024",
-    link: "sql.pdf"
-  },
-  {
-    title: "Agile Project Management Certification",
-    issuer: "Google",
-    date: "Nov 2023",
-    link: "agile-pm.pdf"
-  },
-];
-
-const experiences = [
-  {
-    title: "Oracle Practice Lead",
-    company: "RedIron Technologies",
-    period: "2021 - Present",
-    description:
-      "Spearheaded strategic initiatives to drive business growth, including defining partnership roadmaps, launching core products through joint go-to-market efforts, building revenue centers from the ground up, and fostering collaborative relationships to uncover opportunities, secure high-value deals, and enable scalable success.",
-    skills: ["React", "Node.js", "AWS", "Docker"],
-  },
-  {
-    title: "Oracle Product Manager",
-    company: "RedIron Technologies",
-    period: "2021 - Present",
-    description:
-      "Drove product strategy by analyzing Oracle's Xstore product and retailer pain points, crafting targeted value propositions and use cases, and refining positioning through customer interviews and market research. Led a successful pilot and rollout to 500+ stores while enhancing lead generation with SEO-optimized case study webpages showcasing project successes.",
-    skills: ["React", "JavaScript", "Python", "Node.js"],
-  },
-  {
-    title: "Oracle Project Manager",
-    company: "RedIron Technologies",
-    period: "2021 - Present",
-    description:
-      "Led agile sprint cycles and managed product roadmaps in JIRA to deliver a Progressive Web App to production. Spearheaded a company-wide KPI initiative by defining key metrics and implementing Smartsheet dashboards to drive alignment and foster a data-driven culture.",
-    skills: ["React", "JavaScript", "Python", "Node.js"],
-  },
-];
-
-const projects = [
-  {
-    title: "Task Trackr",
-    description: "A full-featured to-do list built with React and Node.js",
-    skills: ["React", "Node.js", "PostgreSQL", "Express.js"],
-    github: "https://github.com",
-    live: "https://example.com",
-  },
-  {
-    title: "Task Management App",
-    description:
-      "A collaborative task management application with real-time updates",
-    skills: ["React", "Firebase", "Tailwind CSS"],
-    github: "https://github.com",
-    live: "https://example.com",
-  },
-  {
-    title: "Weather Dashboard",
-    description:
-      "A weather dashboard with detailed forecasts and interactive maps",
-    skills: ["React", "OpenWeather API", "Chart.js"],
-    github: "https://github.com",
-    live: "https://example.com",
-  },
-];
+const skills = [];
 
 export default function About() {
   const [highlightedSkill, setHighlightedSkill] = useState(null);

@@ -4,13 +4,6 @@ import '../styles/project-card.css';
 export default function ProjectCard({ project }) {
   return (
     <div className="project-card">
-      <div className="project-image-container">
-        <img
-          className="project-image"
-          src={project.image}
-          alt={project.title}
-        />
-      </div>
       <div className="project-content">
         <div className="project-details">
           <h3 className="project-title">
@@ -20,7 +13,7 @@ export default function ProjectCard({ project }) {
             {project.description}
           </p>
           <div className="project-technologies">
-            {project.technologies.map((tech) => (
+            {project.skills.map((tech) => (
               <span
                 key={tech}
                 className="technology-tag"
