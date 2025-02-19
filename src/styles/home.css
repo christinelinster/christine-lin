@@ -1,5 +1,5 @@
 .home-container {
-  height: calc(100vh - 4rem);
+  height: calc(100vh - 6rem);
   display: flex;
   align-items: center;
   background-color: linear-gradient(to bottom right, #f9fafb, #f3f4f6);
@@ -68,7 +68,7 @@
   max-width: 28rem;
   margin-left: auto;
   margin-right: auto;
-  font-size: 1rem;
+  font-size: 0.85rem;
   color: #4b5563;
 }
 
