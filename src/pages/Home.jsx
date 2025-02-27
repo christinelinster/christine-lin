@@ -28,7 +28,7 @@ export default function Home() {
                 .typeString("Software Developer | ")
                 .changeDelay(50)
                 .pauseFor(300)
-                .typeString("Practice Lead | ")
+                .typeString("Oracle Practice Lead | ")
                 .changeDelay(50)
                 .pauseFor(300)
                 .typeString(" Lifelong Student ")

@@ -8,7 +8,7 @@ const projects = [
     },
     {
       title: "News API (WIP)",
-      description: "Discover your personalized latest news in one click. Built with Currents News API",
+      description: "Discover your personalized latest news in one click. Built with Currents News API.",
       skills: ["React", "Express.js", "Vercel", "Javascript", "Node.js", "REST API"],
       github: "https://github.com/christinelinster/api-news",
       live: "https://api-news-six.vercel.app/",
