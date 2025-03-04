@@ -115,7 +115,7 @@ export default function About() {
                     <div key={index} className="certification-item">
                       <h4 className="certification-title">{cert.title}</h4>
                       <a
-                        href={`/src/assets/${cert.link}`}
+                        href={`/assets/${cert.link}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="certification-link"
@@ -150,7 +150,7 @@ export default function About() {
             <div className="experience-header">
               <h3 className="section-title">Experience</h3>
               <a
-                href="/src/assets/resume.pdf"
+                href="/assets/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="resume-link"
