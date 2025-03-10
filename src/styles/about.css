@@ -8,25 +8,33 @@
 }
 
 .about-container {
-  max-width: 80rem;
-  margin: 0 auto;
+  height: calc(100vh - 6rem);
+  overflow-y: auto;
+  background-color: #ffffff;
+  padding-top: 2rem;
+}
+
+.dark .about-container {
+  background-color: #111827;
 }
 
 .about-content {
-  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
   padding: 3rem 1rem;
 }
 
-
 @media (min-width: 640px) {
   .about-content {
-    padding: 2rem 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
 
 @media (min-width: 1024px) {
   .about-content {
-    padding: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 
