@@ -4,7 +4,7 @@ const projects = [
       description: "A full-featured to-do list built with React and Node.js",
       skills: ["React", "Node.js", "PostgreSQL", "Javascript", "Express.js", "Vercel", "REST API"],
       github: "https://github.com/christinelinster/task-trackr",
-      live: "https://task-trackr-neon.vercel.app",
+      live: "https://task-trackr-auth.vercel.app/",
     },
     {
       title: "News API (WIP)",
