@@ -1,8 +1,8 @@
 const projects = [
     {
       title: "Task Trackr (WIP)",
-      description: "A full-featured to-do list built with React and Node.js",
-      skills: ["React", "Node.js", "PostgreSQL", "Javascript", "Express.js", "Vercel", "REST API"],
+      description: "A full-stack task management app designed to help users organize and track their tasks efficiently.",
+      skills: ["React", "Node.js", "PostgreSQL", "Javascript", "Express.js", "Vercel", "Neon", "Render", "REST API"],
       github: "https://github.com/christinelinster/task-trackr",
       live: "https://task-trackr-auth.vercel.app/",
     },
