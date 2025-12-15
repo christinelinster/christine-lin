@@ -147,15 +147,12 @@ textarea.form-input:focus {
 }
 
 .contact-info {
-  background-color: #ffffff;
   border-radius: 0.5rem;
   padding: 2rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-.dark .contact-info {
-  background-color: #1f2937;
-}
+
 
 .contact-info-title {
   font-size: 1.25rem;

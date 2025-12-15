@@ -3,11 +3,43 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-html{
+/* Root Variables */
+:root {
+    /* Colors */
+    --primary-black: #111827;
+    --primary-white:#f9fafb;
+    --primary-purple: #4f46e5;
+    --dark-purple: #4338ca;
+    --light-purple: #818cf8;
+
+    --primary-gray: #374151;
+    --dark-gray: #1f2937;
+    --light-gray: #e5e7eb;
+
+    --light-gray-purple: #e0e7ff;
+    --dark-gray-purple: #312e81;
+
+    --dark-text: #4b5563;
+    --light-text: #9ca3af;
+
+
+
+    /* Typography */
+    --font-title: 'Funnel Display', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-heading: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'Geologica', -apple-system, BlinkMacSystemFont, 'sans-serif'
+}
+
+
+html {
     font-family: "Geologica";
     font-weight: 200;
 }
 
-h1, h2, h3, h4, label{
+h1,
+h2,
+h3,
+h4,
+label {
     font-family: "Alata";
 }

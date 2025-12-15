@@ -5,7 +5,6 @@ import ExperienceRole from "../components/ExperienceRole";
 import ProjectRole from "../components/ProjectRole";
 import projects from "../data/projects"
 import experiences from "../data/experiences";
-import certifications from "../data/certifications";
 import "../styles/about.css";
 
 const skills = [];
@@ -106,27 +105,6 @@ export default function About() {
                     gain fresh perspectives, and collaborate to turn ideas into
                     impactful creations.
                   </p>
-                </div>
-              </div>
-              <div className="certifications-section">
-                <h3 className="section-title">Certifications</h3>
-                <div className="certifications-list">
-                  {certifications.map((cert, index) => (
-                    <div key={index} className="certification-item">
-                      <h4 className="certification-title">{cert.title}</h4>
-                      <a
-                        href={`${cert.link}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="certification-link"
-                      >
-                        <p className="certification-details">
-                          {cert.issuer} • {cert.date}
-                        </p>
-                        <ExternalLink className="h-4 w-4" />
-                      </a>
-                    </div>
-                  ))}
                 </div>
               </div>
             </div>

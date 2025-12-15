@@ -11,13 +11,18 @@ export default function Home() {
       <div className="home-content">
         <div className="text-center">
           <h2 className="home-title">
-            <span className="block">Hello, I'm</span>
+            <span className="block">Hi, my name is</span>
             <span className="home-name">Christine Lin</span>
+            <p>Software Engineer</p>
           </h2>
-          
+
 
           <p className="home-description">
-          <Typewriter
+            After four years leading tech strategy and partnerships,
+            I moved from the boardroom to the codebase to build solutions I used to only imagine.
+            Today, I am dedicated to building scalable applications rooted in technical excellence, user empathy, and business impact. I don't just write code; I build tools that solve real-world problems.
+
+          {/* <Typewriter
           options={{
             autoStart: true,
             loop: true,
@@ -25,18 +30,15 @@ export default function Home() {
             onInit={(typewriter) => {
               typewriter
               .changeDelay(50)
-                .typeString("Software Developer | ")
+                .typeString("Software Engineer | ")
                 .changeDelay(50)
                 .pauseFor(300)
-                .typeString("Oracle Practice Lead | ")
-                .changeDelay(50)
-                .pauseFor(300)
-                .typeString(" Lifelong Student ")
+                .typeString(" Building Impacftful Solutions ")
                 .pauseFor(3000)
                 .deleteAll()
                 .start()
             }}
-          />
+          /> */}
           </p>
           <div className="button-container">
             <div>
