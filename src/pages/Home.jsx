@@ -11,44 +11,29 @@ export default function Home() {
       <div className="home-content">
         <div className="text-center">
           <h2 className="home-title">
-            <span className="block">Hi, my name is</span>
-            <span className="home-name">Christine Lin</span>
-            <p>Software Engineer</p>
+           <p className="home-intro">hi, my name is</p>
+
+            <p className="home-name">Christine Lin</p>
+            <p className="home-role">Full-Stack Software Engineer</p>
           </h2>
 
 
           <p className="home-description">
-            After four years leading tech strategy and partnerships,
-            I moved from the boardroom to the codebase to build solutions I used to only imagine.
-            Today, I am dedicated to building scalable applications rooted in technical excellence, user empathy, and business impact. I don't just write code; I build tools that solve real-world problems.
+            I build production-grade applications using Python, Flask, React, and PostgreSQL.
+            My background includes over 4 years collaborating with engineering teams to ship SaaS products at scale.
+            This experience shapes how I design backend systems, model databases, and approach deployment: by combining technical execution with business context.
 
-          {/* <Typewriter
-          options={{
-            autoStart: true,
-            loop: true,
-          }}
-            onInit={(typewriter) => {
-              typewriter
-              .changeDelay(50)
-                .typeString("Software Engineer | ")
-                .changeDelay(50)
-                .pauseFor(300)
-                .typeString(" Building Impacftful Solutions ")
-                .pauseFor(3000)
-                .deleteAll()
-                .start()
-            }}
-          /> */}
+
           </p>
           <div className="button-container">
             <div>
               <Link to="/projects" className="primary-button">
-                View My Work
+                View Projects
               </Link>
             </div>
             <div>
               <Link to="/contact" className="secondary-button">
-                Contact Me
+                Download Resume
               </Link>
             </div>
           </div>

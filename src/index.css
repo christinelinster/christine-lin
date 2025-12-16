@@ -25,8 +25,8 @@
 
 
     /* Typography */
-    --font-title: 'Funnel Display', -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-heading: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-heading: 'Geologica', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-subheading: 'Inconsolata', monospace, sans-serif;
     --font-body: 'Geologica', -apple-system, BlinkMacSystemFont, 'sans-serif'
 }
 
