@@ -7,8 +7,8 @@
 :root {
     /* Colors */
     --primary-black: #111827;
-    --primary-white:#f9fafb;
-    --primary-purple: #4f46e5;
+    --primary-white:#F0F0FE;
+    --primary-purple: #816FBB;
     --dark-purple: #4338ca;
     --light-purple: #818cf8;
 
@@ -30,16 +30,39 @@
     --font-body: 'Geologica', -apple-system, BlinkMacSystemFont, 'sans-serif'
 }
 
-
-html {
-    font-family: "Geologica";
+body{
+    font-family: var(--font-body);
     font-weight: 200;
+    font-size: 0.9rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-label {
-    font-family: "Alata";
+/* Layout and Base Styles */
+.app-container {
+  min-height: 100vh;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.main-content {
+  padding-top: 6rem; /* Equivalent to pt-16 (16 * 0.25rem) */
+}
+
+/* Light Mode (Default) */
+.app-container {
+  background-color: var(--primary-white);
+  color: #111827;
+}
+
+/* Dark Mode */
+/* This assumes your ThemeProvider adds a 'dark' class to the <html> or <body> tag */
+.dark .app-container {
+  background-color: var(--primary-black);
+  color: var(--light-text);
+}
+
+h2, h3, a {
+    font-family: var(--font-subheading);
+}
+
+a{
+    font-size: 1rem;
 }

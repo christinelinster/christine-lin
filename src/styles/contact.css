@@ -1,12 +1,7 @@
 .contact-container {
   height: calc(100vh - 4rem);
   overflow-y: auto;
-  background-color: #f9fafb;
   padding-top: 2rem;
-}
-
-.dark .contact-container {
-  background-color: #111827;
 }
 
 .contact-content {

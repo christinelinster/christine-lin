@@ -1,12 +1,7 @@
 .projects-container {
   height: calc(100vh - 6rem);
   overflow-y: auto;
-  background-color: #ffffff;
   padding-top: 2rem;
-}
-
-.dark .projects-container {
-  background-color: #111827;
 }
 
 .projects-content {

@@ -10,9 +10,8 @@ function App() {
   return (
     <ThemeProvider>
       <Router>
-        <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-200">
           <Navbar />
-          <main className="pt-16">
+          <main className="main-content">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
@@ -20,7 +19,6 @@ function App() {
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </main>
-        </div>
       </Router>
     </ThemeProvider>
   );

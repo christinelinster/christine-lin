@@ -1,64 +1,43 @@
 .home-container {
   height: calc(100vh - 6rem);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  background-color: var(--primary-white)
-}
-
-.dark .home-container {
-  background-color: var(--primary-black);
+  justify-content: center;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .home-content {
+  display: flex;
+  flex-direction: column;
   max-width: 80rem;
-  margin: 0 auto;
-  padding: 3rem 1rem;
+  padding: 2rem 1.5rem;
+  row-gap: 2rem;
 }
+
 
 @media (min-width: 640px) {
-  .home-content {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
+.home-content{
+  row-gap: 1rem;
 }
-
-@media (min-width: 1024px) {
-  .home-content {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-}
-
-.home-title {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-  font-weight: 800;
-  letter-spacing: 0.025em;
-  color: var(--dark-text);
-}
-
-.dark .home-title {
-  color: var(--light-gray);
-}
-
-@media (min-width: 640px) {
-  .home-title {
-    font-size: 3rem;
-    line-height: 1;
-  }
 }
 
 @media (min-width: 768px) {
-  .home-title {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
+.home-content{
+  row-gap: 0.7rem;
+}
+}
+
+@media (min-width: 1024px) {
+.home-content{
+  row-gap: 0.5rem;
+}
 }
 
 .home-intro {
   font-family: var(--font-subheading);
-  font-size: 1rem;
-  letter-spacing: 2px;
   font-weight: 400;
   color: var(--dark-text);
 }
@@ -68,36 +47,32 @@
 }
 
 .home-name {
-  font-family: var(--font-heading);
-  font-weight: 600;
-
+  font-weight: 300;
   color: var(--primary-purple);
-  font-size: 2.6rem;
-  margin: 1rem 0 0;
+  font-size: 3rem;
+  letter-spacing: -2px;
   text-transform: lowercase;
 }
 
 .home-role {
-  font-family: var(--font-heading);
   font-size: 0.8rem;
   font-weight: 300;
-  color: var(--dark-text);
+  color: var(--light-text);
   text-transform: uppercase;
   transform: scale(1, 1.1);
   letter-spacing: 1px;
+  margin-top: -0.3rem;
 }
 
 .dark .home-role {
-  color: var(--light-purple);
-
+  color: rgb(136, 146, 176);
 }
 
 .dark .home-name {
-  color: #e0e7ffdd;
+  color: rgb(204, 214, 246);
 }
-
-.home-description {
-  display: none;
+.home-description{
+  color: var(--dark-text);
 }
 
 .dark .home-description {
@@ -105,31 +80,46 @@
 }
 
 @media (min-width: 640px) {
+  .home-intro{
+    font-size: 1rem;
+  }
+
   .home-name {
     font-size: 4rem;
-    margin: 0.8rem 0 0.6rem
+    margin: 0.8rem 0 0;
   }
 
   .home-role {
-    font-size: 1rem;
-    font-weight: 300;
-    transform: scale(1, 1.1);
     letter-spacing: 2px;
+      margin-top: -0.5rem;
   }
 
   .home-description {
-    display: block;
     font-family: var(--font-body);
-    font-weight: 200;
-    margin-top: 0.75rem;
+    margin: 2rem 0;
     max-width: 28rem;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    text-align: left;
   }
 }
 
 @media (min-width: 768px) {
+  .home-name {
+    font-size: 4.5rem;
+  }
+
+  .home-description {
+    font-size: 1rem;
+    max-width: 35rem;
+  }
+
+  .home-role{
+      margin-top: -0.8rem;
+  }
+
+}
+
+@media (min-width: 1024px) {
 
   .home-name {
     font-size: 5rem;
@@ -137,108 +127,85 @@
   }
 
   .home-description {
-    margin-top: 1.25rem;
-    font-size: 1rem;
-    font-weight: 200;
-    line-height: 1.5rem;
     max-width: 42rem;
+  }
+
+  .home-role{
+      margin-top: -1.2rem;
   }
 
 }
 
 .button-container {
-  margin-top: 1.25rem;
-  width: 14rem;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 @media (min-width: 640px) {
   .button-container {
-    display: flex;
     width: 28rem;
-    justify-content: center;
   }
 }
 
-@media (min-width: 768px) {
-  .button-container {
-    margin-top: 2rem;
-  }
-}
-
-.primary-button {
+.cta {
+  position: relative;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.75rem 2rem;
+  padding: 0.4rem 1rem;
+  background: transparent;
   border-radius: 0.375rem;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--light-gray);
-  background-color: var(--primary-purple);
-  transition: background-color 0.2s;
+  font-weight: 600;
+  cursor: pointer;
+  /* 1. Create a faint base border so it's not "invisible" to accessibility */
+  border: 1.5px solid rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  color: var(--dark-gray);
 }
 
-.primary-button:hover {
-  background-color: var(--dark-purple)
+.dark .cta{
+  color: var(--light-purple);
+  border: 1.5px solid rgba(255, 255, 255, 0.05);
 }
 
-.dark .primary-button {
-  background-color: var(--primary-purple);
-}
-
-.dark .primary-button:hover {
-  background-color: var(--light-purple);
-}
-
-.secondary-button {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.75rem 2rem;
+/* 2. The Animated Border Layer */
+.cta::after {
+  content: '';
+  position: absolute;
+  inset: -1.5px; /* Sits exactly on the border */
+  border: 1.5px solid var(--primary-purple);
   border-radius: 0.375rem;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--light-gray);
-  background-color: var(--primary-gray);
-  transition: background-color 0.2s;
-  margin-top: 0.75rem;
+
+  /* The "Premium" Secret: Scale it to 0 initially */
+  transform: scale(0.9);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* 3. Hover State */
+.cta:hover::after {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Optional: Slight lift effect */
+.cta:hover {
+  transform: translateY(-1px);
+  color: var(--primary-purple);
 }
 
 @media (min-width: 640px) {
+  .cta{
+    font-size: 0.9rem;
+  }
   .secondary-button {
     margin-top: 0;
     margin-left: 0.75rem;
   }
 }
 
-.secondary-button:hover {
-  background-color: var(--dark-gray);
+@media (min-width: 1024px){
+  .cta{
+    font-size: 1rem;
+  }
 }
 
-.social-links {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
-.social-link {
-  color: #6b7280;
-  transition: color 0.2s;
-}
-
-.social-link:hover {
-  color: #4b5563;
-}
-
-.dark .social-link {
-  color: var(--light-text);
-}
-
-.dark .social-link:hover {
-  color: var(--light-purple);
-}

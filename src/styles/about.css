@@ -10,12 +10,7 @@
 .about-container {
   height: calc(100vh - 6rem);
   overflow-y: auto;
-  background-color: #ffffff;
   padding-top: 2rem;
-}
-
-.dark .about-container {
-  background-color: #111827;
 }
 
 .about-content {
