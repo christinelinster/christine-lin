@@ -1,42 +1,54 @@
 .skill-tag {
   display: inline-flex;
   align-items: center;
-  padding: 0.15rem 0.75rem;
-  border-radius: 8px;
-  font-size: 0.8rem;
-  font-weight: 300;
-  border: 2px solid #e0e7ff;
-  color: #4338ca;
-  transition: all 0.2s;
+  padding: 0.2rem 0.6rem; /* Slightly tighter padding for a cleaner look */
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600; /* Increased weight slightly for better legibility */
+  border: 1px solid var(--light-gray); /* Thinner, consistent line weight */
+  color: var(--primary-gray);
+  background-color: transparent;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   user-select: none;
-
 }
 
 .dark .skill-tag {
-  border-color: #312e81;
-  color: #c7d2fe;
+  border-color: var(--dark-gray);
+  color: #9ca3af;
 }
 
+/* --- Hover State: The "Premium Snap" --- */
 .skill-tag:hover {
-  background-color: #c7d2fe;
+  border-color: var(--primary-purple);
+  color: var(--primary-purple);
+  background-color: rgba(139, 92, 246, 0.05); /* Very light purple wash */
+  transform: translateY(-1px);
 }
 
 .dark .skill-tag:hover {
-  background-color: #4338ca;
+  border-color: var(--light-purple);
+  color: var(--light-purple);
+  background-color: rgba(167, 139, 250, 0.05);
 }
 
+/* --- Highlighted State (When active/selected) --- */
 .skill-tag.highlighted {
-  background-color: #c7d2fe;
-  border-color: #4338ca;
+  background-color: var(--primary-purple);
+  border-color: var(--primary-purple);
+  color: white; /* Contrast for the solid background */
+  box-shadow: 0 4px 10px rgba(139, 92, 246, 0.2);
 }
 
 .dark .skill-tag.highlighted {
-  background-color: #4338ca;
-  border-color: #818cf8;
+  background-color: var(--primary-purple);
+  border-color: var(--primary-purple);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
+/* --- Focus State --- */
 .skill-tag:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 0 0 2px var(--light-gray-purple), 0 0 0 4px var(--primary-purple);
 }

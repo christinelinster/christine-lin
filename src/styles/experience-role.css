@@ -1,57 +1,72 @@
 .experience-role {
-  background-color: #f3f4f6;
+  /* Using your variables and matching the mobile menu tint logic */
+background-color: rgba(139, 92, 246, 0.05);
   padding: 1.5rem;
-  border-radius: 0.5rem;
-  transition: all 0.2s;
-  border: 2px solid transparent;
+  border-radius: 0.75rem; /* Slightly rounder for a premium feel */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1.5px solid var(--light-gray);
+  position: relative;
 }
 
 .dark .experience-role {
-  background-color: #1f2937;
+  background-color: #161421; /* Matches the mobile menu tint */
+  border-color: #2d2640;
 }
 
+/* --- Hover State: Subtle Lift & Glow --- */
 .experience-role:hover {
-  background-color: #e0e7ff;
+  transform: translateY(-4px);
+  background-color: var(--primary-white);
+  border-color: var(--primary-purple);
+  box-shadow: 0 10px 20px -5px rgba(139, 92, 246, 0.1);
 }
 
 .dark .experience-role:hover {
-  background-color: rgba(79, 70, 229, 0.1);
+  background-color: #1c192b;
+  border-color: var(--light-purple);
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3);
 }
 
+/* --- Highlighted State (When skill is selected) --- */
 .experience-role.highlighted {
-  background-color: #e0e7ff;
-  border-color: #6366f1;
+  border-color: var(--primary-purple);
+  background-color: var(--light-gray-purple);
+  box-shadow: 0 0 0 1px var(--primary-purple); /* Double border effect */
 }
 
 .dark .experience-role.highlighted {
-  background-color: rgba(79, 70, 229, 0.1);
-  border-color: #818cf8;
+  border-color: var(--light-purple);
+  background-color: rgba(139, 92, 246, 0.1);
+  box-shadow: 0 0 0 1px var(--light-purple);
 }
 
+/* --- Typography --- */
 .role-title {
   font-size: 1.125rem;
-  font-weight: 600;
-  color: #111827;
+  font-weight: 700;
+  color: var(--dark-gray);
 }
 
 .dark .role-title {
-  color: #ffffff;
+  color: var(--primary-white);
 }
 
 .role-company {
   margin-top: 0.25rem;
-  color: #6b7280;
-  font-size: 0.875rem;
+  color: var(--primary-purple); /* Using brand color for emphasis */
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 .dark .role-company {
-  color: #d1d5db;
+  color: var(--light-purple);
 }
 
 .role-description {
   margin-top: 0.75rem;
-  color: #4b5563;
-  line-height: 1.5;
+  color: var(--primary-gray);
+  line-height: 1.6;
+  font-size: 0.95rem;
 }
 
 .dark .role-description {
@@ -62,5 +77,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-top: 1rem;
+  margin-top: 1.25rem;
 }
+

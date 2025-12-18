@@ -3,8 +3,6 @@ import ExperienceRole from "../components/ExperienceRole";
 import experiences from "../data/experiences";
 import "../styles/about.css";
 
-
-
 export default function About() {
 
   return (
