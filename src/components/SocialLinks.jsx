@@ -1,34 +1,40 @@
-import { Github, Linkedin, Mail } from "lucide-react";
-import '../styles/social-links.css'
-const SocialLinks = () => {
-    return(
-        <div className="social-links">
-          <hr className="divider"/>
-            <a
-              href="https://github.com/christinelinster"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-link"
-            >
-              <Github className="social-icon" />
-            </a>
-            <a
-              href="https://linkedin.com/in/christinelin19"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-link"
-            >
-              <Linkedin className="social-icon" />
-            </a>
-            <a href="mailto:lin.christine19@gmail.com" className="social-link">
-              <Mail className="social-icon" />
-            </a>
-            <hr className="divider" />
-          </div>
-    )
+import { Github, Linkedin, Twitter } from 'lucide-react';
+import '../styles/social-links.css';
 
+const socials = [
+  { icon: Github, href: 'https://github.com/yourusername', label: 'GitHub' },
+  { icon: Linkedin, href: 'https://linkedin.com/in/yourusername', label: 'LinkedIn' },
+  { icon: Twitter, href: 'https://twitter.com/yourusername', label: 'Twitter' },
+];
+
+export default function SocialLinks() {
+  return (
+    <div className="social-wrapper">
+      {/* The Desktop Sidebar & Mobile Tab */}
+      <div className="social-sidebar right-side">
+        <div className="social-links-list">
+          {socials.map((social) => (
+            <a
+              key={social.label}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link-item"
+            >
+              <social.icon className="social-icon-img" />
+            </a>
+          ))}
+        </div>
+
+        {/* Email Link: Vertical on Desktop */}
+        <div className="email-container">
+          <a href="mailto:your@email.com" className="email-link">
+            your@email.com
+          </a>
+        </div>
+
+        <div className="social-line"></div>
+      </div>
+    </div>
+  );
 }
-
-export default SocialLinks
-
-

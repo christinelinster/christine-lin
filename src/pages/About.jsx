@@ -5,7 +5,7 @@ import "../styles/about.css";
 export default function About() {
 
   return (
-    <div className="about-container">
+    <div className="container about-container">
       <div className="about-content">
         <div className="about-grid">
           <div className="about-section">

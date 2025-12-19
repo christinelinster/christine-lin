@@ -5,9 +5,7 @@ import "../styles/home.css";
 
 export default function Home() {
   return (
-    <div className="home-container">
-
-        <SocialLinks />
+    <div className="container home-container">
 
       <div className="home-content">
         <div>

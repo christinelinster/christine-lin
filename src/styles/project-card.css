@@ -64,7 +64,7 @@
 
 .dark .project-content {
   background-color: #161421;
-  border-left: 2px solid var(--dark-gray-purple);
+  border-left: 2px solid var(--dark-purple);
 }
 /* Hover & Highlight States */
 .project-card:hover .project-content {

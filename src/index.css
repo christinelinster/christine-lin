@@ -1,9 +1,10 @@
-/* Tailwind directives */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+/* --- 1. Global Reset & Base Setup --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* Root Variables */
 :root {
   /* Main Theme */
   --primary-black: #111827;
@@ -13,10 +14,7 @@
   --primary-purple: #6F6AC3;
   --dark-purple: #292244;
   --light-purple: #806EBD;
-
-  /* Highlight Variable */
   --highlight-silver: #CCD6F6;
-  /* Added for high-priority dark mode text */
 
   /* Grays & Surfaces */
   --primary-gray: #374151;
@@ -25,7 +23,6 @@
 
   /* Specialized Backgrounds */
   --light-gray-purple: #DADFFD;
-  --dark-gray-purple: #292244;
 
   /* Text */
   --dark-text: #847489;
@@ -37,37 +34,74 @@
   --font-body: 'Geologica', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+html {
+  background-color: var(--primary-white);
+}
+
+html.dark {
+  background-color: var(--primary-black);
+}
+
+html, body {
+    height: 100%;
+    scroll-behavior: smooth;
+    /* Improves font rendering on macOS/iOS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 body {
+  background-color: transparent; /* Inherits from html */
+  overflow-x: hidden; /* Prevent horizontal scroll jitter */
   font-family: var(--font-body);
   font-weight: 200;
   font-size: 0.9rem;
+  line-height: 1.6; /* Added for better readability */
 }
 
-/* Layout and Base Styles */
-.app-container {
-  min-height: 100vh;
-  transition: background-color 0.2s, color 0.2s;
+.container {
+  overflow-y: auto;
+  background-color: transparent;
 }
 
-.main-content {
-  padding-top: 6rem;
-  /* Equivalent to pt-16 (16 * 0.25rem) */
+/* Premium Scrollbar to match theme */
+.container::-webkit-scrollbar {
+  width: 6px;
 }
 
-/* Light Mode (Default) */
-.app-container {
-  background-color: var(--primary-white);
-  color: #111827;
+.container::-webkit-scrollbar-track {
+  background: transparent;
 }
 
-/* Dark Mode */
-/* This assumes your ThemeProvider adds a 'dark' class to the <html> or <body> tag */
-.dark .app-container {
-  background-color: var(--primary-black);
-  color: var(--light-text);
+.container::-webkit-scrollbar-thumb {
+  background: var(--light-gray);
+  border-radius: 10px;
 }
 
-h2{
+.dark .container::-webkit-scrollbar-thumb {
+  background: var(--primary-gray);
+}
+
+/* --- 2. Element Resets --- */
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    font: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Standardizing SVGs (Lucide Icons) */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* --- 3. Typography Design System --- */
+h2 {
   font-family: var(--font-subheading);
   font-size: 1.2rem;
   font-weight: 600;
@@ -77,16 +111,16 @@ h2{
   letter-spacing: 2px;
 }
 
-h3{
+h3 {
   font-family: var(--font-heading);
- font-size: 1.15rem;
+  font-size: 1.15rem;
   font-weight: 400;
   color: var(--dark-purple);
   margin-bottom: 0.75rem;
   letter-spacing: -0.3px;
 }
 
-.dark h2, .dark h3{
+.dark h2, .dark h3 {
   color: var(--highlight-silver);
 }
 
@@ -94,4 +128,23 @@ a {
   font-family: var(--font-subheading);
   font-size: 0.8rem;
   font-weight: 600;
+  text-decoration: none;
+  color: inherit; /* Let components handle specific link colors */
+}
+
+/* --- 4. Layout & Theme --- */
+.app-container {
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Slightly slower for smoother flow */
+  background-color: var(--primary-white);
+  color: var(--primary-black);
+}
+
+.dark .app-container {
+  background-color: var(--primary-black);
+  color: var(--light-text);
+}
+
+.main-content {
+  padding-top: 6rem;
 }

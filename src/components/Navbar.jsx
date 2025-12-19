@@ -1,4 +1,4 @@
-import { Home, Menu, X, Sun, Moon, ExternalLink } from 'lucide-react';
+import { Home, Menu, X, Sun, Moon } from 'lucide-react';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
@@ -38,14 +38,14 @@ export default function Navbar() {
                 {item.label}
               </Link>
             ))}
-              <a
-                href="/assets/resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="resume-link"
-              >
-                Resume
-              </a>
+            <a
+              href="/assets/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="resume-link"
+            >
+              Resume
+            </a>
             <button onClick={toggleDarkMode} className="theme-toggle">
               {isDarkMode ? (
                 <Sun className="theme-icon" />
@@ -56,27 +56,14 @@ export default function Navbar() {
           </div>
 
           {/* Mobile menu button */}
-          <div className="mobile-menu-button">
-            <button
-              onClick={toggleDarkMode}
-              className="theme-toggle"
-              aria-label="Toggle dark mode"
-            >
-              {isDarkMode ? (
-                <Sun className="theme-icon" />
-              ) : (
-                <Moon className="theme-icon" />
-              )}
+
+          <div className="mobile-controls">
+            <button onClick={toggleDarkMode} className="theme-toggle" aria-label="Toggle dark mode">
+              {isDarkMode ? <Sun className="theme-icon" /> : <Moon className="theme-icon" />}
             </button>
-            <button
-              onClick={toggleMenu}
-              className="mobile-menu-button"
-            >
-              {isOpen ? (
-                <X className="theme-icon" />
-              ) : (
-                <Menu className="theme-icon" />
-              )}
+
+            <button onClick={toggleMenu} className="menu-toggle-btn" aria-label="Toggle menu">
+              {isOpen ? <X className="theme-icon" /> : <Menu className="theme-icon" />}
             </button>
           </div>
         </div>

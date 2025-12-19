@@ -16,7 +16,7 @@ export default function Projects() {
   ].sort();
 
   return (
-    <div className="projects-container">
+    <div className="container projects-container">
       <div className="projects-content">
         <div className="section">
           <div className="skills-container">

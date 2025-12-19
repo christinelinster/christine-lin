@@ -1,8 +1,7 @@
-/* --- Global Overrides for consistency --- */
+/* --- Container & Layout --- */
 .about-container {
   height: calc(100vh - 6rem);
   overflow-y: auto;
-  background-color: transparent; /* Let app-container handle bg */
 }
 
 .about-content {
@@ -11,8 +10,16 @@
   padding: 1rem 1.5rem;
 }
 
-/* --- Typography & Links --- */
+.about-grid {
+  display: grid;
+  gap: 4rem;
+}
 
+.about-main {
+  max-width: 100%;
+}
+
+/* --- Typography --- */
 .about-description {
   color: var(--primary-gray);
   line-height: 1.8;
@@ -25,18 +32,13 @@
   opacity: 0.65;
 }
 
-/* Premium Inline Link Styling */
+/* --- Premium Inline Link Styling --- */
 .about-link {
   font-family: var(--font-body);
   color: var(--primary-purple);
   font-weight: 600;
-  text-decoration: none;
   position: relative;
   transition: color 0.3s ease;
-}
-
-.dark .about-link {
-  color: var(--primary-purple);
 }
 
 .about-link::after {
@@ -58,17 +60,10 @@
   width: 100%;
 }
 
-.dark .about-link::after{
-  background-color: var(--light-purple);
-}
-
-.dark .about-link:hover{
-  color: var(--light-purple);
-}
-
+.dark .about-link::after { background-color: var(--light-purple); }
+.dark .about-link:hover { color: var(--light-purple); }
 
 /* --- Experience Section --- */
-
 .experience-header {
   display: flex;
   justify-content: space-between;
@@ -78,36 +73,26 @@
   padding-bottom: 1rem;
 }
 
-.dark .experience-header {
-  border-bottom-color: var(--dark-gray);
-}
-
-/* --- Layout Grid --- */
-.about-grid {
-  display: grid;
-  gap: 4rem;
-}
-
-.about-main {
-  max-width: 100%; /* Improves readability of long-form text */
-}
-
-@media (min-width: 1024px) {
-.about-main{
-  max-width: 45rem;
-}
-
-  .about-grid {
-    grid-template-columns: 1.1fr 0.9fr; /* Side-by-side on desktop */
-    align-items: start;
-  }
-  .about-content{
-    padding: 3rem 1.5rem;
-  }
-}
+.dark .experience-header { border-bottom-color: var(--dark-gray); }
 
 .experience-list {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+/* --- Desktop Refinements (1024px) --- */
+@media (min-width: 1024px) {
+  .about-content {
+    padding: 3rem 1.5rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: start;
+  }
+
+  .about-main {
+    max-width: 45rem;
+  }
 }
