@@ -1,4 +1,4 @@
-import { Home, Menu, X, Sun, Moon } from 'lucide-react';
+import { Home, Menu, X, Sun, Moon, ExternalLink } from 'lucide-react';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
@@ -38,6 +38,14 @@ export default function Navbar() {
                 {item.label}
               </Link>
             ))}
+              <a
+                href="/assets/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="resume-link"
+              >
+                Resume
+              </a>
             <button onClick={toggleDarkMode} className="theme-toggle">
               {isDarkMode ? (
                 <Sun className="theme-icon" />

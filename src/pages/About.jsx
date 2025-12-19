@@ -1,4 +1,3 @@
-import { ExternalLink } from "lucide-react";
 import ExperienceRole from "../components/ExperienceRole";
 import experiences from "../data/experiences";
 import "../styles/about.css";
@@ -12,7 +11,7 @@ export default function About() {
           <div className="about-section">
             <div className="about-flex">
               <div className="about-main">
-                <h2 className="about-title">About Me</h2>
+                <h2 className="about-title">{'[ About Me ]'}</h2>
                 <div className="about-text">
                   <p className="about-description">
                     I am a software engineer with a background in building and scaling B2B SaaS products,
@@ -53,16 +52,7 @@ export default function About() {
 
           <div className="section">
             <div className="experience-header">
-              <h3 className="section-title">Experience</h3>
-              <a
-                href="/assets/resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="resume-link"
-              >
-                <span className="resume-text">View Resume</span>
-                <ExternalLink className="h-4 w-4" />
-              </a>
+              <h2 className="section-title">{'[ Experience ]'}</h2>
             </div>
             <dl className="experience-list">
               {experiences.map((experience) => (

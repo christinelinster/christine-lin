@@ -5,41 +5,42 @@
 
 /* Root Variables */
 :root {
-/* Main Theme */
-    --primary-black: #111827;
-    --primary-white: #F0F0FE;
+  /* Main Theme */
+  --primary-black: #111827;
+  --primary-white: #F0F0FE;
 
-    /* The New Purple Palette */
-    --primary-purple: #6F6AC3;
-    --dark-purple: #292244;
-    --light-purple: #806EBD;
+  /* The New Purple Palette */
+  --primary-purple: #6F6AC3;
+  --dark-purple: #292244;
+  --light-purple: #806EBD;
 
-    /* Highlight Variable */
-    --highlight-silver: #CCD6F6;   /* Added for high-priority dark mode text */
+  /* Highlight Variable */
+  --highlight-silver: #CCD6F6;
+  /* Added for high-priority dark mode text */
 
-    /* Grays & Surfaces */
-    --primary-gray: #374151;
-    --dark-gray: #1f2937;
-    --light-gray: #D3D3E8;
+  /* Grays & Surfaces */
+  --primary-gray: #374151;
+  --dark-gray: #1f2937;
+  --light-gray: #D3D3E8;
 
-    /* Specialized Backgrounds */
-    --light-gray-purple: #DADFFD;
-    --dark-gray-purple: #292244;
+  /* Specialized Backgrounds */
+  --light-gray-purple: #DADFFD;
+  --dark-gray-purple: #292244;
 
-    /* Text */
-    --dark-text: #847489;
-    --light-text: #D3D3E8;
+  /* Text */
+  --dark-text: #847489;
+  --light-text: #D3D3E8;
 
-    /* Typography */
-    --font-heading: 'Geologica', -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-subheading: 'Inconsolata', monospace, sans-serif;
-    --font-body: 'Geologica', -apple-system, BlinkMacSystemFont, sans-serif;
+  /* Typography */
+  --font-heading: 'Geologica', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-subheading: 'Inconsolata', monospace, sans-serif;
+  --font-body: 'Geologica', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-body{
-    font-family: var(--font-body);
-    font-weight: 200;
-    font-size: 0.9rem;
+body {
+  font-family: var(--font-body);
+  font-weight: 200;
+  font-size: 0.9rem;
 }
 
 /* Layout and Base Styles */
@@ -49,7 +50,8 @@ body{
 }
 
 .main-content {
-  padding-top: 6rem; /* Equivalent to pt-16 (16 * 0.25rem) */
+  padding-top: 6rem;
+  /* Equivalent to pt-16 (16 * 0.25rem) */
 }
 
 /* Light Mode (Default) */
@@ -65,10 +67,31 @@ body{
   color: var(--light-text);
 }
 
-h2, h3, a {
-    font-family: var(--font-subheading);
+h2{
+  font-family: var(--font-subheading);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--dark-text);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-a{
-    font-size: 0.9rem;
+h3{
+  font-family: var(--font-heading);
+ font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--dark-purple);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.3px;
+}
+
+.dark h2, .dark h3{
+  color: var(--highlight-silver);
+}
+
+a {
+  font-family: var(--font-subheading);
+  font-size: 0.8rem;
+  font-weight: 600;
 }

@@ -26,6 +26,7 @@
 }
 
 .home-name {
+  font-family: var(--font-heading);
   font-weight: 300;
   color: var(--primary-purple);
   font-size: clamp(3rem, 10vw, 5rem);
@@ -54,7 +55,7 @@
 .dark .home-intro { color: var(--light-purple); }
 .dark .home-name { color: var(--highlight-silver); } /* Preserved specific hex as requested */
 .dark .home-role { color: var(--light-text); opacity: 0.8; }
-.dark .home-description { color: var(--light-text); opacity: 0.8; }
+.dark .home-description { color: var(--light-text); opacity: 0.65; }
 
 /* Combined Media Queries for Layout & Sizing */
 @media (min-width: 640px) {

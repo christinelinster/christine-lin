@@ -9,9 +9,9 @@ export default function ExperienceRole({ title, company, period, description, sk
       <dd className="role-description">{description}</dd>
       <div className="role-skills">
         {skills.map((skill) => (
-          <SkillTag 
-            key={skill} 
-            name={skill} 
+          <SkillTag
+            key={skill}
+            name={skill}
             onClick={() => onSkillClick(skill)}
             isHighlighted={skill === highlightedSkill}
           />

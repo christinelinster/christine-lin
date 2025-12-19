@@ -2,47 +2,41 @@
 .about-container {
   height: calc(100vh - 6rem);
   overflow-y: auto;
-  padding-top: 2rem;
   background-color: transparent; /* Let app-container handle bg */
 }
 
 .about-content {
   max-width: 80rem;
   margin: 0 auto;
-  padding: 3rem 1.5rem;
+  padding: 1rem 1.5rem;
 }
 
 /* --- Typography & Links --- */
-.about-title {
-  font-size: 2.25rem;
-  font-weight: 800;
-  color: var(--dark-gray);
-  margin-bottom: 1.5rem;
-  letter-spacing: -0.025em;
-}
-
-.dark .about-title {
-  color: var(--primary-white);
-}
 
 .about-description {
   color: var(--primary-gray);
   line-height: 1.8;
   margin-bottom: 1.5rem;
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 
 .dark .about-description {
-  color: #9ca3af;
+  color: var(--light-text);
+  opacity: 0.65;
 }
 
 /* Premium Inline Link Styling */
 .about-link {
+  font-family: var(--font-body);
   color: var(--primary-purple);
   font-weight: 600;
   text-decoration: none;
   position: relative;
   transition: color 0.3s ease;
+}
+
+.dark .about-link {
+  color: var(--primary-purple);
 }
 
 .about-link::after {
@@ -52,7 +46,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background-color: var(--primary-purple);
+  background-color: var(--dark-purple);
   transition: width 0.3s ease;
 }
 
@@ -64,16 +58,16 @@
   width: 100%;
 }
 
-/* --- Experience Section --- */
-.section-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--dark-gray);
+.dark .about-link::after{
+  background-color: var(--light-purple);
 }
 
-.dark .section-title {
-  color: var(--primary-white);
+.dark .about-link:hover{
+  color: var(--light-purple);
 }
+
+
+/* --- Experience Section --- */
 
 .experience-header {
   display: flex;
@@ -88,33 +82,6 @@
   border-bottom-color: var(--dark-gray);
 }
 
-/* Resume Link - Animated like a Button */
-.resume-link {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  color: var(--primary-purple);
-  font-weight: 600;
-  font-size: 0.875rem;
-  text-decoration: none;
-  border: 1.5px solid rgba(139, 92, 246, 0.1);
-  border-radius: 0.5rem;
-  transition: all 0.3s ease;
-}
-
-.resume-link:hover {
-  background-color: rgba(139, 92, 246, 0.05);
-  transform: translateY(-2px);
-  color: var(--dark-purple);
-}
-
-.dark .resume-link:hover {
-  color: var(--light-purple);
-  background-color: rgba(167, 139, 250, 0.05);
-}
-
 /* --- Layout Grid --- */
 .about-grid {
   display: grid;
@@ -122,13 +89,20 @@
 }
 
 .about-main {
-  max-width: 45rem; /* Improves readability of long-form text */
+  max-width: 100%; /* Improves readability of long-form text */
 }
 
 @media (min-width: 1024px) {
+.about-main{
+  max-width: 45rem;
+}
+
   .about-grid {
-    grid-template-columns: 1.2fr 0.8fr; /* Side-by-side on desktop */
+    grid-template-columns: 1.1fr 0.9fr; /* Side-by-side on desktop */
     align-items: start;
+  }
+  .about-content{
+    padding: 3rem 1.5rem;
   }
 }
 

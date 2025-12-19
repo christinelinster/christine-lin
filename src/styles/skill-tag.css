@@ -1,9 +1,10 @@
 .skill-tag {
+  font-family: var(--font-subheading);
   display: inline-flex;
   align-items: center;
   padding: 0.2rem 0.6rem; /* Slightly tighter padding for a cleaner look */
   border-radius: 6px;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 600; /* Increased weight slightly for better legibility */
   border: 1px solid var(--light-gray); /* Thinner, consistent line weight */
   color: var(--primary-gray);

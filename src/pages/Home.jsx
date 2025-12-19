@@ -11,7 +11,7 @@ export default function Home() {
 
       <div className="home-content">
         <div>
-          <p className="home-intro">hi, my name is</p>
+          <p className="home-intro">Hi, my name is</p>
           <p className="home-name">Christine Lin, </p>
           <p className="home-role">[ Software Engineer ]</p>
         </div>

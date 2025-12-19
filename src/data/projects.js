@@ -14,5 +14,5 @@ const projects = [
       live: "https://api-news-six.vercel.app/",
     },
   ];
-  
+
   export default projects;

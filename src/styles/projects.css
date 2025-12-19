@@ -1,69 +1,32 @@
 .projects-container {
   height: calc(100vh - 6rem);
   overflow-y: auto;
-  padding-top: 2rem;
+  background-color: transparent;
 }
 
 .projects-content {
   max-width: 80rem;
   margin: 0 auto;
-  padding: 3rem 1rem;
+  padding: 1rem 1.5rem;
 }
 
-@media (min-width: 640px) {
-  .projects-content {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
+.section {
+  margin-bottom: 3rem;
 }
 
-@media (min-width: 1024px) {
-  .projects-content {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
 }
 
-.projects-header {
-  text-align: center;
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-.projects-title {
-  font-size: 1.875rem;
-  font-weight: 800;
-  letter-spacing: 0.025em;
-  color: #111827;
-}
-
-.dark .projects-title {
-  color: #ffffff;
-}
-
-@media (min-width: 640px) {
-  .projects-title {
-    font-size: 2.25rem;
-  }
-}
-
-.projects-description {
-  margin-top: 0.75rem;
-  max-width: 42rem;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 1.1rem;
-  font-weight: 400;
-  color: #6b7280;
-}
-
-.dark .projects-description {
-  color: #d1d5db;
-}
-
-@media (min-width: 640px) {
-  .projects-description {
-    margin-top: 1rem;
-  }
-}
 
 .projects-grid {
   margin-top: 3rem;
@@ -75,10 +38,16 @@
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
 }
 
 @media (min-width: 1024px) {
   .projects-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+
+  .projects-content{
+      padding:3rem 1.5rem;
   }
 }
