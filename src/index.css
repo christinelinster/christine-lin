@@ -10,7 +10,7 @@
   --primary-black: #111827;
   --primary-white: #F0F0FE;
 
-  /* The New Purple Palette */
+  /* Purple Palette */
   --primary-purple: #6F6AC3;
   --dark-purple: #292244;
   --light-purple: #806EBD;
@@ -36,53 +36,84 @@
 
 html {
   background-color: var(--primary-white);
+  height: 100%;
 }
 
 html.dark {
   background-color: var(--primary-black);
 }
 
-html, body {
-    height: 100%;
-    scroll-behavior: smooth;
-    /* Improves font rendering on macOS/iOS */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
 body {
-  background-color: transparent; /* Inherits from html */
-  overflow-x: hidden; /* Prevent horizontal scroll jitter */
+height: 100%;
+  background-color: transparent;
+  overflow: hidden;
   font-family: var(--font-body);
   font-weight: 200;
   font-size: 0.9rem;
-  line-height: 1.6; /* Added for better readability */
+  line-height: 1.6;
+  overflow: hidden;
+}
+/* --- 4. Layout & Theme --- */
+
+/* main-content acts as the wrapper for all pages */
+.main-content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 4rem;
+  background-color: var(--primary-white);
+  transition: background-color 0.3s ease;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
+.dark .main-content {
+  background-color: var(--primary-black);
+}
+
+/* The general class used by every page */
 .container {
-  overflow-y: auto;
-  background-color: transparent;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  transition: max-width 0.4s ease, padding 0.4s ease;
+  overflow: visible;
 }
 
-/* Premium Scrollbar to match theme */
-.container::-webkit-scrollbar {
-  width: 6px;
+/* --- Scrollbar Appearance --- */
+
+.main-content::-webkit-scrollbar {
+  width: 10px;
 }
 
-.container::-webkit-scrollbar-track {
+.main-content::-webkit-scrollbar-track {
   background: transparent;
 }
 
-.container::-webkit-scrollbar-thumb {
-  background: var(--light-gray);
+.main-content::-webkit-scrollbar-thumb {
+  background-color: var(--light-gray);
   border-radius: 10px;
 }
 
-.dark .container::-webkit-scrollbar-thumb {
-  background: var(--primary-gray);
+.dark .main-content::-webkit-scrollbar-thumb {
+  background-color: var(--primary-gray);
 }
 
-/* --- 2. Element Resets --- */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80rem;
+    padding-right: 6rem;
+  }
+}
+
+@media (min-width: 1680px) {
+  .container {
+    max-width: 100rem;
+    padding-right: 8rem;
+  }
+}
+
+/* --- Element Resets --- */
 button {
     background: none;
     border: none;
@@ -105,7 +136,7 @@ h2 {
   font-family: var(--font-subheading);
   font-size: 1.2rem;
   font-weight: 600;
-  color: var(--dark-text);
+  color: var(--primary-purple);
   margin-bottom: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -129,22 +160,6 @@ a {
   font-size: 0.8rem;
   font-weight: 600;
   text-decoration: none;
-  color: inherit; /* Let components handle specific link colors */
+  color: inherit;
 }
 
-/* --- 4. Layout & Theme --- */
-.app-container {
-  min-height: 100vh;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Slightly slower for smoother flow */
-  background-color: var(--primary-white);
-  color: var(--primary-black);
-}
-
-.dark .app-container {
-  background-color: var(--primary-black);
-  color: var(--light-text);
-}
-
-.main-content {
-  padding-top: 6rem;
-}

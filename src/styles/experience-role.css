@@ -1,15 +1,14 @@
 .experience-role {
-  /* Using your variables and matching the mobile menu tint logic */
-background-color: rgba(139, 92, 246, 0.05);
+  background-color: rgba(139, 92, 246, 0.05);
   padding: 1.5rem;
-  border-radius: 0.75rem; /* Slightly rounder for a premium feel */
+  border-radius: 0.75rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1.5px solid var(--light-gray);
   position: relative;
 }
 
 .dark .experience-role {
-  background-color: #161421; /* Matches the mobile menu tint */
+  background-color: #161421;
   border-color: #2d2640;
 }
 
@@ -31,7 +30,7 @@ background-color: rgba(139, 92, 246, 0.05);
 .experience-role.highlighted {
   border-color: var(--primary-purple);
   background-color: var(--light-gray-purple);
-  box-shadow: 0 0 0 1px var(--primary-purple); /* Double border effect */
+  box-shadow: 0 0 0 1px var(--primary-purple);
 }
 
 .dark .experience-role.highlighted {
@@ -43,7 +42,7 @@ background-color: rgba(139, 92, 246, 0.05);
 /* --- Typography --- */
 .role-title {
   font-family: var(--font-heading);
- font-size: 0.95rem;
+  font-size: 0.95rem;
   font-weight: 500;
   color: var(--dark-purple);
   letter-spacing: -0.3px;
@@ -54,9 +53,9 @@ background-color: rgba(139, 92, 246, 0.05);
 }
 
 .role-company {
-    font-family: var(--font-subheading);
+  font-family: var(--font-subheading);
   margin-top: 0.25rem;
-  color: var(--primary-purple); /* Using brand color for emphasis */
+  color: var(--primary-purple);
   font-size: 0.9rem;
   font-weight: 400;
 }
@@ -83,4 +82,3 @@ background-color: rgba(139, 92, 246, 0.05);
   gap: 0.5rem;
   margin-top: 1.25rem;
 }
-

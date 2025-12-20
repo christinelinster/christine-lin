@@ -2,9 +2,9 @@ import { Github, Linkedin, Twitter } from 'lucide-react';
 import '../styles/social-links.css';
 
 const socials = [
-  { icon: Github, href: 'https://github.com/yourusername', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://linkedin.com/in/yourusername', label: 'LinkedIn' },
-  { icon: Twitter, href: 'https://twitter.com/yourusername', label: 'Twitter' },
+  { icon: Github, href: 'https://github.com/christinelinster', label: 'GitHub' },
+  { icon: Linkedin, href: 'https://linkedin.com/in/christinelin19', label: 'LinkedIn' },
+  {icon: Twitter, href:'https://twitter.com', label: 'Email'}
 ];
 
 export default function SocialLinks() {
@@ -28,8 +28,8 @@ export default function SocialLinks() {
 
         {/* Email Link: Vertical on Desktop */}
         <div className="email-container">
-          <a href="mailto:your@email.com" className="email-link">
-            your@email.com
+          <a href="mailto:lin.christine19@gmail.com" className="email-link">
+            lin.christine19@gmail.com
           </a>
         </div>
 

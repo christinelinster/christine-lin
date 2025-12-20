@@ -1,4 +1,3 @@
-
 .contact-content {
   max-width: 80rem;
   margin: 0 auto;
@@ -25,16 +24,22 @@
   margin-bottom: 1rem;
 }
 
+.dark .contact-label {
+  color: var(--primary-purple);
+}
+
 .contact-title {
   font-family: var(--font-heading);
-  font-size: clamp(2.5rem, 5vw, 4rem); /* Responsive fluid typography */
+  font-size: clamp(2.5rem, 5vw, 4rem);
   line-height: 1.1;
   font-weight: 700;
   margin-bottom: 2rem;
   color: var(--primary-black);
 }
 
-.dark .contact-title { color: var(--highlight-silver); }
+.dark .contact-title {
+  color: var(--highlight-silver);
+}
 
 .contact-description {
   max-width: 32rem;
@@ -44,7 +49,10 @@
   margin-bottom: 3rem;
 }
 
-.dark .contact-description { color: var(--light-text); opacity: 0.8; }
+.dark .contact-description {
+  color: var(--light-text);
+  opacity: 0.65;
+}
 
 /* Primary Button Styling */
 .primary-contact-btn {
@@ -65,13 +73,19 @@
   box-shadow: 0 10px 20px -5px rgba(111, 106, 195, 0.3);
 }
 
+.dark .primary-contact-btn:hover {
+  background-color: var(--light-purple);
+}
+
 /* Sidebar Info Styling */
 .contact-sidebar {
   border-left: 1px solid var(--light-gray);
   padding-left: 3rem;
 }
 
-.dark .contact-sidebar { border-left-color: var(--dark-gray); }
+.dark .contact-sidebar {
+  border-left-color: var(--dark-gray);
+}
 
 .contact-info-list {
   display: flex;
@@ -96,16 +110,23 @@
   gap: 0.25rem;
 }
 
+.dark .info-text {
+  color: var(--light-text);
+  opacity: 0.8;
+}
+
 .info-label {
   font-family: var(--font-subheading);
   font-size: 0.75rem;
-  font-weight: 300;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--dark-text);
 }
 
-.contact-link, .info-value {
+
+.contact-link,
+.info-value {
   font-family: var(--font-subheading);
   font-size: 1rem;
   font-weight: 500;
@@ -131,7 +152,7 @@
     padding-top: 3rem;
   }
 
-  .dark .contact-sidebar{
+  .dark .contact-sidebar {
     border-color: var(--dark-gray);
   }
 }

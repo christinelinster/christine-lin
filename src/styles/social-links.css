@@ -8,9 +8,9 @@
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* --- 1. "Tab" View (Mobile & Smaller Desktops) --- */
-/* This stays active as long as the content fills most of the screen */
-@media (max-width: 1679px) {
+/* --- "Tab" View (Mobile & Smaller Desktops) --- */
+
+@media (max-width: 1199px) {
     .social-sidebar.right-side {
         top: 50%;
         right: 0;
@@ -41,12 +41,18 @@
     }
 }
 
-/* --- 2. "Pillar" View (Large Screens Only) --- */
-@media (min-width: 1680px) {
+/* --- "Pillar" View (Large Screens Only) --- */
+@media (min-width: 1200px) {
     .social-sidebar.right-side {
         bottom: 0;
-        right: calc(50% - 50rem + 2rem);
+        right: max(1.5rem, calc(50% - 40rem + 2rem));
         gap: 1.5rem;
+    }
+
+    @media (min-width: 1680px) {
+        .social-sidebar.right-side {
+            right: max(2rem, calc(50% - 50rem + 2rem));
+        }
     }
 
     .social-links-list {
@@ -86,7 +92,7 @@
     }
 }
 
-/* --- 3. Universal Icon Styling --- */
+/* --- Universal Icon Styling --- */
 .social-link-item {
     color: var(--dark-text);
     display: flex;
@@ -103,5 +109,6 @@
     transform: translateY(-3px);
 }
 
-.dark .social-link-item { color: var(--light-text); }
-.dark .social-link-item:hover { color: var(--light-purple); }
+.dark .social-link-item:hover {
+    color: var(--light-purple);
+}

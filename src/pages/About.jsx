@@ -1,5 +1,6 @@
 import ExperienceRole from "../components/ExperienceRole";
 import experiences from "../data/experiences";
+import degrees from "../data/degrees";
 import "../styles/about.css";
 
 export default function About() {
@@ -65,6 +66,20 @@ export default function About() {
             </dl>
           </div>
 
+                    <div className="section">
+            <div className="experience-header">
+              <h2 className="section-title">{'[ EDUCATION ]'}</h2>
+            </div>
+            <dl className="experience-list">
+              {degrees.map((deg) => (
+                <ExperienceRole
+                  key={deg.title}
+                  id={`role-${deg.skills[0]}`}
+                  {...deg}
+                />
+              ))}
+            </dl>
+          </div>
 
         </div>
       </div>

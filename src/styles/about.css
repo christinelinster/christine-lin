@@ -36,7 +36,8 @@
 .about-link {
   font-family: var(--font-body);
   color: var(--primary-purple);
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 1rem;
   position: relative;
   transition: color 0.3s ease;
 }
@@ -60,8 +61,13 @@
   width: 100%;
 }
 
-.dark .about-link::after { background-color: var(--light-purple); }
-.dark .about-link:hover { color: var(--light-purple); }
+.dark .about-link::after {
+  background-color: var(--light-purple);
+}
+
+.dark .about-link:hover {
+  color: var(--light-purple);
+}
 
 /* --- Experience Section --- */
 .experience-header {
@@ -73,7 +79,9 @@
   padding-bottom: 1rem;
 }
 
-.dark .experience-header { border-bottom-color: var(--dark-gray); }
+.dark .experience-header {
+  border-bottom-color: var(--dark-gray);
+}
 
 .experience-list {
   display: flex;
@@ -95,4 +103,49 @@
   .about-main {
     max-width: 45rem;
   }
+}
+
+.education-section {
+  margin-top: 5rem; /* Significant breathing room between sections */
+}
+
+.education-item {
+  margin-bottom: 3rem;
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+
+.degree-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: var(--primary-black);
+}
+
+.dark .degree-title { color: var(--highlight-silver); }
+
+.education-date {
+  font-family: var(--font-subheading);
+  font-size: 0.85rem;
+  color: var(--primary-purple);
+}
+
+.school-name {
+  font-family: var(--font-body);
+  font-weight: 500;
+  color: var(--primary-gray);
+  margin-bottom: 0.75rem;
+}
+
+.dark .school-name { color: var(--light-text); opacity: 0.9; }
+
+.education-description {
+  color: var(--dark-text);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 40rem;
 }

@@ -1,4 +1,4 @@
-const experiences = [
+const degrees = [
   {
     title: "Software Developer",
     company: "Freelance",
@@ -36,4 +36,4 @@ const experiences = [
 
 ];
 
-export default experiences;
+export default degrees;

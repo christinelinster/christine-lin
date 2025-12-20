@@ -4,27 +4,20 @@
   z-index: 50;
   backdrop-filter: blur(15px);
   border-bottom: 1px solid var(--light-gray);
-  /* Ensure background matches exactly */
-  background-color: rgba(240, 240, 254, 0.8);
 }
 
 .dark .navbar {
   border-bottom-color: var(--dark-gray);
-  background-color: rgba(17, 24, 39, 0.8);
 }
 
 .navbar-container {
-  /* Default matches your about-content width */
   max-width: 80rem;
   margin: 0 auto;
   padding: 0 1.5rem;
   transition: max-width 0.4s ease, padding 0.4s ease;
 }
 
-/* Large Screen Alignment:
-   When the screen is wide enough (Content 80rem + Sidebars),
-   we expand the navbar to meet the pillars.
-*/
+/* Large Screen Alignment: */
 @media (min-width: 1680px) {
   .navbar-container {
     max-width: 100rem;
