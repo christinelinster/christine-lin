@@ -13,15 +13,16 @@
 .navbar-container {
   max-width: 80rem;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
   transition: max-width 0.4s ease, padding 0.4s ease;
 }
 
-/* Large Screen Alignment: */
+/* Large Screen Alignment:
+
+*/
 @media (min-width: 1680px) {
   .navbar-container {
     max-width: 100rem;
-    padding: 0 2rem;
   }
 }
 
@@ -135,7 +136,7 @@
 
 /* --- Responsive Layout Hand-off (640px+) --- */
 @media (min-width: 640px) {
-  .navbar-container { padding: 0 1.5rem; }
+
 
   .desktop-menu {
     display: flex;
@@ -156,7 +157,7 @@
 
 /* --- High-res Padding (1024px+) --- */
 @media (min-width: 1024px) {
-  .navbar-container { padding: 0 2rem; }
+
 }
 
 /* --- Mobile Menu & Animation --- */

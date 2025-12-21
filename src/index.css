@@ -1,9 +1,11 @@
 /* --- 1. Global Reset & Base Setup --- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+
 
 :root {
   /* Main Theme */
@@ -44,7 +46,7 @@ html.dark {
 }
 
 body {
-height: 100%;
+  height: 100%;
   background-color: transparent;
   overflow: hidden;
   font-family: var(--font-body);
@@ -53,6 +55,7 @@ height: 100%;
   line-height: 1.6;
   overflow: hidden;
 }
+
 /* --- 4. Layout & Theme --- */
 
 /* main-content acts as the wrapper for all pages */
@@ -82,22 +85,23 @@ height: 100%;
 
 /* --- Scrollbar Appearance --- */
 
-.main-content::-webkit-scrollbar {
-  width: 10px;
-}
+  .main-content::-webkit-scrollbar {
+    width: 10px;
+  }
 
-.main-content::-webkit-scrollbar-track {
-  background: transparent;
-}
+  .main-content::-webkit-scrollbar-track {
+    margin-top: 4rem;
+    background: transparent;
+  }
 
-.main-content::-webkit-scrollbar-thumb {
-  background-color: var(--light-gray);
-  border-radius: 10px;
-}
+  .main-content::-webkit-scrollbar-thumb {
+    background-color: var(--light-gray);
+    border-radius: 10px;
+  }
 
-.dark .main-content::-webkit-scrollbar-thumb {
-  background-color: var(--primary-gray);
-}
+  .dark .main-content::-webkit-scrollbar-thumb {
+    background-color: var(--primary-gray);
+  }
 
 @media (min-width: 1200px) {
   .container {
@@ -115,20 +119,20 @@ height: 100%;
 
 /* --- Element Resets --- */
 button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: inherit;
-    font: inherit;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Standardizing SVGs (Lucide Icons) */
 img {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
 }
 
 /* --- 3. Typography Design System --- */
@@ -151,7 +155,8 @@ h3 {
   letter-spacing: -0.3px;
 }
 
-.dark h2, .dark h3 {
+.dark h2,
+.dark h3 {
   color: var(--highlight-silver);
 }
 
@@ -162,4 +167,3 @@ a {
   text-decoration: none;
   color: inherit;
 }
-

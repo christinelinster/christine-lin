@@ -1,35 +1,71 @@
 /* --- Container & Layout --- */
 .about-container {
-  height: calc(100vh - 6rem);
-  overflow-y: auto;
+  min-height: calc(100vh - 4rem);
 }
 
 .about-content {
   max-width: 80rem;
   margin: 0 auto;
-  padding: 1rem 1.5rem;
+  padding: 4rem 0rem;
+}
+
+@media (min-width: 1680px) {
+  .about-content {
+    max-width: 100rem;
+  }
 }
 
 .about-grid {
   display: grid;
+  grid-template-columns: 1fr;
   gap: 4rem;
 }
 
-.about-main {
-  max-width: 100%;
+/* --- Sticky Sidebar Logic --- */
+@media (min-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 8rem;
+    align-items: start;
+  }
+
+  .about-sidebar {
+    position: sticky;
+    top: 4rem;
+    height: auto;
+  }
 }
 
-/* --- Typography --- */
+/* --- History Column (Right Side) --- */
+.history-scroll-column {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+
+/* --- Typography & Headers --- */
+
+.about-title, .section-title {
+  font-family: var(--font-subheading);
+  font-size: 0.9rem;
+  letter-spacing: 0.15em;
+  color: var(--primary-purple);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
 .about-description {
   color: var(--primary-gray);
   line-height: 1.8;
-  margin-bottom: 1.5rem;
-  font-size: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
 }
 
 .dark .about-description {
   color: var(--light-text);
-  opacity: 0.65;
+  opacity: 0.7;
+  transition: color 0.3s ease, opacity 0.3s ease;
 }
 
 /* --- Premium Inline Link Styling --- */
@@ -39,7 +75,6 @@
   font-weight: 500;
   font-size: 1rem;
   position: relative;
-  transition: color 0.3s ease;
 }
 
 .about-link::after {
@@ -50,7 +85,6 @@
   width: 0;
   height: 2px;
   background-color: var(--dark-purple);
-  transition: width 0.3s ease;
 }
 
 .about-link:hover {
@@ -71,12 +105,10 @@
 
 /* --- Experience Section --- */
 .experience-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
   border-bottom: 1px solid var(--light-gray);
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 3rem;
+transition: border-color 0.3s ease;
 }
 
 .dark .experience-header {
@@ -91,61 +123,11 @@
 
 /* --- Desktop Refinements (1024px) --- */
 @media (min-width: 1024px) {
-  .about-content {
-    padding: 3rem 1.5rem;
-  }
-
-  .about-grid {
-    grid-template-columns: 1.1fr 0.9fr;
+.about-grid {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 6rem;
     align-items: start;
   }
 
-  .about-main {
-    max-width: 45rem;
-  }
 }
 
-.education-section {
-  margin-top: 5rem; /* Significant breathing room between sections */
-}
-
-.education-item {
-  margin-bottom: 3rem;
-}
-
-.education-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 0.5rem;
-}
-
-.degree-title {
-  font-family: var(--font-heading);
-  font-size: 1.25rem;
-  color: var(--primary-black);
-}
-
-.dark .degree-title { color: var(--highlight-silver); }
-
-.education-date {
-  font-family: var(--font-subheading);
-  font-size: 0.85rem;
-  color: var(--primary-purple);
-}
-
-.school-name {
-  font-family: var(--font-body);
-  font-weight: 500;
-  color: var(--primary-gray);
-  margin-bottom: 0.75rem;
-}
-
-.dark .school-name { color: var(--light-text); opacity: 0.9; }
-
-.education-description {
-  color: var(--dark-text);
-  font-size: 0.95rem;
-  line-height: 1.6;
-  max-width: 40rem;
-}

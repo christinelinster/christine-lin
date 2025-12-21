@@ -3,7 +3,7 @@ import { Mail, MapPin, Linkedin, Github, ArrowRight } from 'lucide-react';
 
 export default function Contact() {
   return (
-    <div className="contact-container">
+    <div className="container contact-container">
       <div className="contact-content">
         <div className="contact-grid">
 

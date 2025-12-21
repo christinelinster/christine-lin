@@ -1,13 +1,8 @@
-.projects-container {
-  height: calc(100vh - 6rem);
-  overflow-y: auto;
-  background-color: transparent;
-}
 
 .projects-content {
   max-width: 80rem;
   margin: 0 auto;
-  padding: 1rem 1.5rem;
+  padding: 3rem 0rem;
 }
 
 .section {
