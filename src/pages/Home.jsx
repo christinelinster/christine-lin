@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import SocialLinks from "../components/SocialLinks";
 import homeContent from "../data/home";
 import "../styles/home.css";
 
@@ -15,7 +14,7 @@ export default function Home() {
         </div>
         <div>
           <p className="home-description">
-            {homeContent.description}
+            {homeContent[0]}
           </p>
         </div>
         <div className="button-container">

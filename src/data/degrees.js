@@ -1,37 +1,21 @@
 const degrees = [
   {
-    title: "Software Developer",
-    company: "Freelance",
-    period: "2025 - Present",
-    overview: "",
-    description: [],
-    links:[],
+    title: "Software Engineering (Core Backend, Python Track)",
+    company: "Launch School",
+    overview: "Completed the mastery-based Python Curriculum (1,200+ hours), specializing in software fundamentals, Object-Oriented Programming, Relational Database schema design (SQL), HTTP/Networked Applications, and System Architecture. Assessment-based progression requiring 90%+ to demonstrate mastery and advance.",
     skills: ["React", "Javascript", "UI/UX", "Responsive Design", "Requirements Gathering"],
   },
-  {
-    title: "Oracle Practice Lead",
-    company: "RedIron Technologies",
-    period: "2021 - 2025",
-    overview: `I collaborated closely with engineering, product, and Oracle Cloud teams
-                to launch and scale cloud-native retail software used by multinational retailers.`,
-    description: [
-      // `Spearheaded the Oracle Cloud partnership from inception,
-      //   overseeing the technical roadmap and establishing technical infrastructure
-      //   to launch 3 SaaS offerings across 8 multinational retailers.`,
-      // `Accelerated time-to-market for RI Commerce, a retail management system,
-      //   on Oracle Cloud by bridging internal and Oracle engineering teams for OCI enablement,
-      //   securing an 855-store deployment and $800K ARR.`,
-      // `Led Agile sprint cycles in JIRA for RI Transact,
-      //   a Progressive Web App extension of RI Commerce,
-      //   coordinating user stories, backlog refinement,
-      //   and testing cycles to meet production deployment deadlines.`,
-      // `Defined solution positioning and technical documentation for
-      //   Pulse (formerly Enterprise X-Ray), an observability platform,
-      //   translating log ingestion capabilities into value propositions
-      //   for a 500-store pilot and rollout.`
-    ],
-    links: [],
-    skills: ["Figma", "WordPress", "Roadmap Planning", "OKRs", "Go-to-Market"],
+    {
+    title: "Full Stack Open",
+    company: "University of Helsinki",
+    overview: "Currently completing an advanced modern web development curriculum focusing on React, Redux, Node.js, and CI/CD pipelines to build production-grade full-stack applications.",
+    skills: ["React", "Javascript", "UI/UX", "Responsive Design", "Requirements Gathering"],
+  },
+      {
+    title: "HBA, Honors Business Administration",
+    company: "Ivey Business School, Western University",
+    overview: "SheHacksIV Winner (2020): Built award-winning medication reminder app [View on Devpost]",
+    skills: ["React", "Javascript", "UI/UX", "Responsive Design", "Requirements Gathering"],
   },
 
 ];

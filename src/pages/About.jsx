@@ -1,7 +1,11 @@
 import ExperienceRole from "../components/ExperienceRole";
 import experiences from "../data/experiences";
+import DegreeRole from "../components/DegreeRole";
 import degrees from "../data/degrees";
 import "../styles/about.css";
+import aboutContent from "../data/about";
+import skills from "../data/skills";
+import SkillTag from "../components/SkillTag";
 
 export default function About() {
   return (
@@ -12,21 +16,32 @@ export default function About() {
           <div className="about-sidebar">
             <h2 className="about-title">{'[ About Me ]'}</h2>
             <div className="about-text">
-              <p className="about-description">
-                I am a software engineer with a background in building and scaling B2B SaaS products,
-                focused on writing production-grade code across the full stack.
-              </p>
-              <p className="about-description">
-                My path into engineering started at a hackathon where my team built <a className="about-link" href="https://www.devpost.com/software/dose-lt7i2o">Dose</a>.
-                That spark led me to pursue a career in tech strategy, where I spent over 4 years as Oracle Practice Lead.
-              </p>
-              <p className="about-description">
-                Working with engineering teams shifted my focus toward low-level implementation details.
-                To deepen my technical foundation, I completed Launch School’s mastery-based curriculum.
-              </p>
-              <p className="about-description">
-                Today, I build software with a strong foundation in both the “how” and the “why.”
-              </p>
+              {aboutContent.map((paragraph, index) => (
+                <p key={index} className="about-description">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+            <div className="about-skills-section">
+              <p className="about-skills-title">{'Technical Skills'}</p>
+
+              <div className="about-skills-container">
+                {skills.map((skillGroup, index) => (
+                  <div key={index} className="skill-category">
+                    <h4 className="skill-category-title">{skillGroup.category}</h4>
+                    <div className="skill-tags-wrapper">
+                      {skillGroup.items.map((item) => (
+                        <SkillTag
+                          key={item}
+                          name={item}
+                          isHighlighted={false} // Default state
+                          onClick={() => { }}    // No-op for static display
+                        />
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -39,7 +54,6 @@ export default function About() {
                 {experiences.map((experience) => (
                   <ExperienceRole
                     key={experience.title}
-                    id={`role-${experience.skills[0]}`}
                     {...experience}
                   />
                 ))}
@@ -52,9 +66,8 @@ export default function About() {
               </div>
               <dl className="experience-list">
                 {degrees.map((deg) => (
-                  <ExperienceRole
+                  <DegreeRole
                     key={deg.title}
-                    id={`role-${deg.skills[0]}`}
                     {...deg}
                   />
                 ))}

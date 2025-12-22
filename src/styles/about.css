@@ -40,26 +40,18 @@
 .history-scroll-column {
   display: flex;
   flex-direction: column;
-  gap: 6rem;
+  gap: 4rem;
 }
 
 
 /* --- Typography & Headers --- */
 
-.about-title, .section-title {
-  font-family: var(--font-subheading);
-  font-size: 0.9rem;
-  letter-spacing: 0.15em;
-  color: var(--primary-purple);
-  margin-bottom: 1.5rem;
-  text-transform: uppercase;
-}
+
 
 .about-description {
   color: var(--primary-gray);
   line-height: 1.8;
   margin-bottom: 2rem;
-  font-size: 1.05rem;
 }
 
 .dark .about-description {
@@ -131,3 +123,52 @@ transition: border-color 0.3s ease;
 
 }
 
+/* --- Skills Section Layout --- */
+.about-skills-section {
+  margin-top: 4rem; /* Separation from the bio text */
+}
+.about-skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Space between categories */
+}
+
+.about-skills-title{
+  font-family: var(--font-subheading);
+  font-size: 0.9rem; /* Smaller than main title (0.9rem) */
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--primary-purple); /* Use color to distinguish, not size */
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 400;
+}
+
+.dark .about-skills-title{
+  color: var(--light-purple);
+}
+
+
+.skill-category-title {
+  font-family: var(--font-subheading); /* Match your existing headers */
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--primary-gray);
+  margin-bottom: 1rem;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.dark .skill-category-title {
+  color: var(--light-text);
+  opacity: 0.6;
+}
+
+.skill-tags-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem; /* Space between the SkillTags */
+}

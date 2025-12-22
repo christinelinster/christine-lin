@@ -12,8 +12,8 @@ export default function Contact() {
             <h2 className="contact-label">Get In Touch</h2>
             <h1 className="contact-title">Let's build something <br/>together.</h1>
             <p className="contact-description">
-              I'm currently open to new opportunities and collaborations.
-              Whether you have a question or just want to say hi, my inbox is always open.
+              I'm open to software engineering opportunities and collaborations.
+              Whether you're hiring, have a question, or just want to connect, I'd love to hear from you!
             </p>
 
             <a href="mailto:lin.christine19@gmail.com" className="primary-contact-btn">

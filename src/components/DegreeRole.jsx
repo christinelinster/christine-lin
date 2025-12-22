@@ -1,19 +1,12 @@
 import SkillTag from './SkillTag';
 import '../styles/experience-role.css';
 
-export default function ExperienceRole({ title, company, period, overview, description, skills}) {
+export default function DegreeRole({ title, company, overview, skills}) {
   return (
     <div className="experience-role">
       <dt className="role-title">{title}</dt>
-      <dd className="role-company">{company} ({period})</dd>
+      <dd className="role-company">{company}</dd>
       <dd className="role-overview">{overview}</dd>
-      <dd className="role-description">
-        <ul>
-          {description.map((point, index) =>
-            <li key={`${company}-${index}`}>{point}</li>
-          )}
-        </ul>
-      </dd>
       <div className="role-skills">
         {skills.map((skill) => (
           <SkillTag
