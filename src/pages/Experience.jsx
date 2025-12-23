@@ -11,7 +11,7 @@ const Experience = () => {
         {/* SECTION 1: WORK EXPERIENCE */}
         <div className="section">
           <div className="experience-header">
-            <h2 className="experience-title">{'[ Experience ]'}</h2>
+            <h2 className="experience-title">{'[ Professional Experience ]'}</h2>
           </div>
           <dl className="experience-list">
             {experiences.map((experience) => (
@@ -26,7 +26,7 @@ const Experience = () => {
         {/* SECTION 2: EDUCATION */}
         <div className="section">
           <div className="experience-header">
-            <h2 className="section-title">{'[ Education ]'}</h2>
+            <h2 className="section-title">{'[ Education & Technical Training]'}</h2>
           </div>
           <dl className="experience-list">
             {degrees.map((deg) => (

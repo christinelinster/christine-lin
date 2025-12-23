@@ -32,7 +32,7 @@ export default function Projects() {
         </div>
 
         <div className="section">
-          <h2 className="projects-title">{'[ Featured Projects ]'}</h2>
+          <h2 className="projects-title">{'[ Explore My Projects ]'}</h2>
           <div className="projects-grid">
             {projects.map((project) => (
               <ProjectCard
