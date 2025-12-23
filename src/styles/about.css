@@ -4,171 +4,208 @@
 }
 
 .about-content {
-  max-width: 80rem;
+  max-width: 55rem;
   margin: 0 auto;
-  padding: 4rem 0rem;
+  padding: 4rem 1rem;
 }
 
-@media (min-width: 1680px) {
-  .about-content {
-    max-width: 100rem;
-  }
-}
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 4rem;
-}
-
-/* --- Sticky Sidebar Logic --- */
-@media (min-width: 1024px) {
-  .about-grid {
-    grid-template-columns: 0.8fr 1.2fr;
-    gap: 8rem;
-    align-items: start;
-  }
-
-  .about-sidebar {
-    position: sticky;
-    top: 4rem;
-    height: auto;
-  }
-}
-
-/* --- History Column (Right Side) --- */
-.history-scroll-column {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-}
-
-
-/* --- Typography & Headers --- */
-
+/* --- Bio Section --- */
 
 
 .about-description {
   color: var(--primary-gray);
   line-height: 1.8;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .dark .about-description {
   color: var(--light-text);
-  opacity: 0.7;
+  opacity: 0.65;
   transition: color 0.3s ease, opacity 0.3s ease;
 }
 
-/* --- Premium Inline Link Styling --- */
-.about-link {
-  font-family: var(--font-body);
-  color: var(--primary-purple);
-  font-weight: 500;
-  font-size: 1rem;
-  position: relative;
-}
-
-.about-link::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--dark-purple);
-}
-
-.about-link:hover {
-  color: var(--dark-purple);
-}
-
-.about-link:hover::after {
-  width: 100%;
-}
-
-.dark .about-link::after {
-  background-color: var(--light-purple);
-}
-
-.dark .about-link:hover {
-  color: var(--light-purple);
-}
-
-/* --- Experience Section --- */
-.experience-header {
-  border-bottom: 1px solid var(--light-gray);
-  padding-bottom: 0.5rem;
-  margin-bottom: 3rem;
-transition: border-color 0.3s ease;
-}
-
-.dark .experience-header {
-  border-bottom-color: var(--dark-gray);
-}
-
-.experience-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-/* --- Desktop Refinements (1024px) --- */
-@media (min-width: 1024px) {
-.about-grid {
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 6rem;
-    align-items: start;
-  }
-
-}
-
-/* --- Skills Section Layout --- */
+/* --- Skills Section --- */
 .about-skills-section {
-  margin-top: 4rem; /* Separation from the bio text */
-}
-.about-skills-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem; /* Space between categories */
+  padding-top: 2rem;
+
 }
 
-.about-skills-title{
+
+.about-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+}
+
+.about-skills-title {
   font-family: var(--font-subheading);
-  font-size: 0.9rem; /* Smaller than main title (0.9rem) */
+  font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--primary-purple); /* Use color to distinguish, not size */
+  color: var(--primary-purple);
   margin-bottom: 2rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  font-weight: 400;
+  font-weight: 600;
 }
 
-.dark .about-skills-title{
+.dark .about-skills-title {
   color: var(--light-purple);
 }
 
-
 .skill-category-title {
-  font-family: var(--font-subheading); /* Match your existing headers */
+  font-family: var(--font-subheading);
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--primary-gray);
   margin-bottom: 1rem;
-  font-weight: 600;
-  opacity: 0.8;
+  font-weight: 700;
+  opacity: 0.6;
 }
 
 .dark .skill-category-title {
   color: var(--light-text);
-  opacity: 0.6;
 }
 
 .skill-tags-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem; /* Space between the SkillTags */
+  gap: 0.6rem;
+}
+
+/* --- Certifications Section --- */
+.certifications-section {
+  margin-top: 4rem; /* Handled in CSS now */
+}
+
+.certifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cert-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0; /* Increased padding for premium feel */
+  border-bottom: 1px solid var(--light-gray);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.cert-item:last-child {
+  border-bottom: none;
+}
+
+.cert-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.cert-title {
+  font-family: var(--font-subheading, sans-serif);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--primary-gray);
+  transition: color 0.2s ease;
+}
+
+.cert-meta {
+  font-family: var(--font-body, monospace);
+  font-size: 0.85rem;
+  color: var(--primary-gray);
+  opacity: 0.6; /* Using opacity instead of hardcoded hex for better theme support */
+  font-weight: 400;
+}
+
+/* Interaction Effects */
+.cert-item.is-link:hover .cert-title {
+  color: var(--primary-purple);
+}
+
+.cert-item.is-link:hover .cert-arrow {
+  transform: translate(2px, -2px);
+  color: var(--primary-purple);
+}
+
+/* Icon Styling */
+.cert-arrow {
+  color: var(--primary-gray);
+  opacity: 0.3; /* Subtle by default */
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+/* --- Dark Mode Certifications --- */
+.dark .cert-item {
+  border-bottom-color: var(--dark-gray);
+}
+
+.dark .cert-title {
+  color: var(--light-text);
+  opacity: 0.9;
+}
+
+.dark .cert-meta {
+  color: var(--light-text);
+  opacity: 0.5;
+}
+
+.dark .cert-arrow {
+  color: var(--light-text);
+  opacity: 0.3;
+}
+
+.dark .cert-item.is-link:hover .cert-title,
+.dark .cert-item.is-link:hover .cert-arrow {
+  color: var(--light-purple);
+  opacity: 1;
+}
+
+/* --- CTA Button --- */
+.about-cta-wrapper {
+  padding-top: 3rem;
+  /* Removed border-top here to avoid double borders if you used one for skills */
+  display: flex;
+}
+
+.about-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-family: var(--font-subheading);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-purple);
+  text-decoration: none;
+  padding: 0.8rem 2rem; /* Wider button */
+  border: 1px solid var(--primary-purple);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.dark .about-cta-button {
+  color: var(--light-purple);
+  border-color: var(--light-purple);
+}
+
+.about-cta-button:hover {
+  background-color: var(--primary-purple);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.dark .about-cta-button:hover {
+  background-color: var(--light-purple);
+  color: var(--bg-dark);
+}
+
+.about-cta-button .arrow {
+  transition: transform 0.2s ease;
+}
+
+.about-cta-button:hover .arrow {
+  transform: translateX(4px);
 }

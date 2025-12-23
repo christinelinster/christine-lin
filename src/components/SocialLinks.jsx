@@ -1,10 +1,10 @@
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 import '../styles/social-links.css';
 
 const socials = [
   { icon: Github, href: 'https://github.com/christinelinster', label: 'GitHub' },
   { icon: Linkedin, href: 'https://linkedin.com/in/christinelin19', label: 'LinkedIn' },
-  {icon: Twitter, href:'https://twitter.com', label: 'Email'}
+  {icon: Mail, href:'mailto:christineline19@gmail.com', label: 'Email'}
 ];
 
 export default function SocialLinks() {

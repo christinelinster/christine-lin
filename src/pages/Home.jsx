@@ -25,7 +25,7 @@ export default function Home() {
           </div>
           <div>
             <Link to="/contact" className="cta secondary-button">
-              Download Resume
+              Get In Touch
             </Link>
           </div>
         </div>

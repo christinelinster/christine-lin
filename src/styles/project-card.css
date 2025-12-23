@@ -158,3 +158,8 @@
 .dark .project-link:hover .project-link-icon {
   color: var(--light-purple);
 }
+.project-link.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none; /* Ensures it cannot be clicked */
+}

@@ -8,13 +8,21 @@ export default function ProjectCard({ project, onSkillClick, highlightedSkill })
   return (
     <div className={`project-card ${isHighlighted ? 'highlighted' : ''}`}>
       <div className="project-image-container">
-        <a href={project.live} target="_blank" rel="noreferrer">
+        {project.live ? (
+          <a href={project.live} target="_blank" rel="noreferrer">
+            <img
+              src={project.image || "/coming_soon.jpg"}
+              alt={project.title}
+              className="project-image"
+            />
+          </a>
+        ) : (
           <img
-            src={project.image || "/test.png"}
+            src={project.image || "/coming_soon.jpg"}
             alt={project.title}
             className="project-image"
           />
-        </a>
+        )}
       </div>
 
       <div className="project-content">
@@ -39,10 +47,10 @@ export default function ProjectCard({ project, onSkillClick, highlightedSkill })
         </div>
 
         <div className="project-links">
-          <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link" aria-label="GitHub Repository">
+          <a href={project.github} target="_blank" rel="noopener noreferrer" className={`project-link ${!project.github ? 'disabled' : ''}`} onClick={(e) => !project.github && e.preventDefault()} aria-label="GitHub Repository">
             <Github className="project-link-icon" />
           </a>
-          <a href={project.live} target="_blank" rel="noopener noreferrer" className="project-link" aria-label="Live Demo">
+          <a href={project.live} target="_blank" rel="noopener noreferrer" className={`project-link ${!project.link ? 'disabled' : ''}`} onClick={(e) => !project.github && e.preventDefault()} aria-label="Live Demo">
             <ExternalLink className="project-link-icon" />
           </a>
         </div>

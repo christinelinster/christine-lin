@@ -100,3 +100,37 @@
   gap: 0.5rem;
   margin-top: 1.25rem;
 }
+
+.role-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: 0.8rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px dashed var(--primary-gray);
+}
+
+.artifact-link {
+  font-family: var(--font-subheading, sans-serif);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--primary-purple);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+/* Hover effect */
+.artifact-link:hover {
+  border-bottom-color: var(--primary-purple);
+  opacity: 0.8;
+}
+
+.link-arrow {
+  font-size: 0.8em;
+  transform: translateY(-1px);
+}

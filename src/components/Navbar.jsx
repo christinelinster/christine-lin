@@ -6,6 +6,7 @@ import '../styles/navbar.css';
 
 const navItems = [
   { path: '/about', label: 'About' },
+  {path: '/experience', label: 'Experience'},
   { path: '/projects', label: 'Projects' },
   { path: '/contact', label: 'Contact' },
 ];
@@ -39,7 +40,7 @@ export default function Navbar() {
               </Link>
             ))}
             <a
-              href="/assets/resume.pdf"
+              href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="resume-link"
