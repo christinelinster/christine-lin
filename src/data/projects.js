@@ -1,8 +1,8 @@
 const projects = [
       {
       title: "Client: Signature Nails Boutique",
-      description: "Designed and developed a custom high-performance web solution for a retail client. Improved SEO rankings and reduced page load times by 40% through image optimization and semantic HTML. Implemented responsive design to capture mobile traffic.",
-      skills: ["React", "Javascript", "Responsive Design", "Frontend Architecture"],
+      description: "Designed and developed a custom web solution for a retail client, establishing their online brand identity and increasing local search visibility.",
+      skills: ["React", "Javascript", "Responsive Design", "SEO"],
       image:"",
       github: null,
       live: null,
