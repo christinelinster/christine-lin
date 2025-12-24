@@ -14,23 +14,31 @@
   user-select: none;
 }
 
-.dark .skill-tag {
-  border-color: var(--dark-gray);
-  color: #9ca3af;
+.skill-tag.interactive {
+  cursor: pointer;
 }
 
-/* --- Hover State: The "Premium Snap" --- */
-.skill-tag:hover {
+.skill-tag.interactive:hover {
   border-color: var(--primary-purple);
   color: var(--primary-purple);
   background-color: rgba(139, 92, 246, 0.05);
   transform: translateY(-1px);
 }
 
-.dark .skill-tag:hover {
+.dark .skill-tag.skill-tag.interactive:hover {
   border-color: var(--light-purple);
   color: var(--light-purple);
   background-color: rgba(167, 139, 250, 0.05);
+}
+
+.skill-tag.highlighted {
+  background-color: var(--primary-purple);
+  color: white;
+}
+
+.dark .skill-tag {
+  border-color: var(--dark-gray);
+  color: #9ca3af;
 }
 
 /* --- Highlighted State (When active/selected) --- */
@@ -48,8 +56,14 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
+.skill-tag.readonly {
+  cursor: default;
+  opacity: 0.9;
+  border: 1px solid transparent;
+}
+
 /* --- Focus State --- */
-.skill-tag:focus {
+.skill-tag.interactive:focus {
   outline: none;
   box-shadow: 0 0 0 2px var(--light-gray-purple), 0 0 0 4px var(--primary-purple);
 }

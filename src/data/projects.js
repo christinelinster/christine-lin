@@ -15,7 +15,7 @@ const projects = [
       skills: ["Python", "Flask", "PostgreSQL", "Javascript", "MVC Pattern", "Render"],
       image:"/wanderly.png",
       github: "https://github.com/christinelinster/wanderly",
-      live: "https://github.com/christinelinster/wanderly",
+      live: "https://wanderly-3nwz.onrender.com",
     },
     {
       overline: "Featured Project",

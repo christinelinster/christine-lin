@@ -38,6 +38,7 @@ export default function ExperienceRole({ title, company, period, overview, descr
           <SkillTag
             key={skill}
             name={skill}
+            readonly={true}
           />
         ))}
       </div>

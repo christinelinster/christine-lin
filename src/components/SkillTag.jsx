@@ -1,10 +1,10 @@
 import '../styles/skill-tag.css';
 
-export default function SkillTag({ name, onClick, isHighlighted }) {
+export default function SkillTag({ name, onClick, isHighlighted, readonly=false }) {
   return (
-    <span 
-      className={`skill-tag ${isHighlighted ? 'highlighted' : ''}`}
-      onClick={onClick}
+    <span
+      className={`skill-tag ${isHighlighted ? 'highlighted' : ''} ${readonly ? 'readonly' : 'interactive'}`}
+      onClick={readonly ? undefined : onClick}
       role="button"
       tabIndex={0}
       onKeyDown={(e) => {
