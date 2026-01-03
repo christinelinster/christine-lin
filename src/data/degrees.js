@@ -9,6 +9,7 @@ const degrees = [
               and Web Application Architecture.
               Assessment-based progression requiring 90%+ to demonstrate mastery and advance.`,
     skills: ["Python", "OOP", "PostgreSQL", "Database Design", "Web Architecture", "Unit Testing"],
+    website:"https://launchschool.com/courses",
   },
     {
     title: "Full Stack Open",
@@ -17,6 +18,7 @@ const degrees = [
               Currently completing an advanced modern web development curriculum focusing on React, Redux, Node.js,
               and CI/CD pipelines to build production-grade full-stack applications.`,
     skills: ["React", "Redux", "Node.js", "CI/CD", "REST APIs"],
+    website:"https://fullstackopen.com/en/",
   },
       {
     title: "HBA, Honors Business Administration",
@@ -28,7 +30,8 @@ const degrees = [
         label: "View on Devpost",
         url: "https://devpost.com/software/dose-lt7i2o"
       }
-    ]
+    ],
+    website:"https://www.ivey.uwo.ca/about/",
   },
 
 ];

@@ -1,7 +1,7 @@
 .contact-content {
   max-width: 80rem;
   margin: 0 auto;
-  padding: 4rem 1rem;
+  padding: 3rem 0rem;
   transition: max-width 0.4s ease;
 }
 

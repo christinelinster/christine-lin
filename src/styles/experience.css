@@ -11,7 +11,7 @@
 
 /* --- Section Styling --- */
 .section {
-  margin-bottom: 5rem; /* Heavy spacing between Experience and Education */
+  margin-bottom: 5rem;
 }
 
 .experience-header {
@@ -31,7 +31,7 @@
 .experience-list {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem; /* Significant gap between job cards */
+  gap: 1.5rem;
 }
 
 /* --- Mobile Responsiveness --- */

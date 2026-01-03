@@ -1,11 +1,16 @@
 import SkillTag from './SkillTag';
 import '../styles/experience-role.css';
 
-export default function ExperienceRole({ title, company, period, overview, description=[], skills=[], links=[] }) {
+export default function ExperienceRole({ title, company, period, overview, website, description = [], skills = [], links = [] }) {
   return (
     <div className="experience-role">
       <dt className="role-title">{title}</dt>
-      <dd className="role-company">{company} {period && `(${period})`}</dd>
+      {website
+        ? <a className='role-company' href={website}>{company} {period && `(${period})`} <span className="link-arrow">↗</span></a>
+        : <dd className="role-company">{company} {period && `(${period})`}</dd>
+      }
+
+
       {overview && <dd className="role-overview">{overview}</dd>}
       {description.length > 0 && (
         <dd className="role-description">

@@ -7,6 +7,7 @@ const experiences = [
     description: [`Developing custom business websites for retail clients using React, implementing responsive design, SEO, and modern UI/UX principles
 `, `Collaborating with clients on requirements gathering and design iteration in Figma, translating business needs into technical solutions`],
     skills: ["React", "Frontend Architecture", "Figma", "SEO & Performance", "Requirements Gathering"],
+    website: "https://christine-lin.vercel.app/"
   },
   {
     title: "Oracle Practice Lead",
@@ -35,7 +36,8 @@ const experiences = [
       { label: "RI Commerce Listing", url: "https://cloudmarketplace.oracle.com/marketplace/en_US/adf.task-flow?tabName=O&adf.tfDoc=%2FWEB-INF%2Ftaskflow%2Fadhtf.xml&application_id=125302027&adf.tfId=adhtf" },
       { label: "Press Release", url: "https://www.prnewswire.com/news-releases/redirons-cloud-based-retail-solution-now-powered-by-oracle-cloud-infrastructure-ri-commerce-now-available-in-the-oracle-cloud-marketplace-301567907.html" },
       { label: "Reference Arch", url: "https://docs.oracle.com/en/solutions/rediron-on-oci/index.html#GUID-479C4A62-8DFD-4D53-B63C-13CFDCA01D81" }
-    ]
+    ],
+    website: "https://redirontech.com/"
   },
 
 ];

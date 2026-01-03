@@ -18,7 +18,7 @@ export default function Projects() {
   return (
     <div className="container projects-container">
       <div className="projects-content">
-        <div className="section">
+        <div className="skills-section">
           <div className="skills-container">
             {allSkills.map((skill) => (
               <SkillTag
@@ -31,8 +31,8 @@ export default function Projects() {
           </div>
         </div>
 
-        <div className="section">
-          <h2 className="projects-title">{'[ Explore My Projects ]'}</h2>
+        <div className="projects-section">
+          <h2 className="projects-title">{'/ My Projects'}</h2>
           <div className="projects-grid">
             {projects.map((project) => (
               <ProjectCard

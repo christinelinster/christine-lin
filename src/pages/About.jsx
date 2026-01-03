@@ -12,7 +12,7 @@ export default function About() {
 
         {/* SECTION 1: BIO */}
         <div className="about-bio-section">
-          <h2 className="about-title">{'[ About Me ]'}</h2>
+          <h2 className="about-title">{'/ About Me'}</h2>
 
           <div className="about-text">
             {aboutContent.map((paragraph, index) => (

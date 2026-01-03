@@ -7,24 +7,6 @@ export default function ProjectCard({ project, onSkillClick, highlightedSkill })
 
   return (
     <div className={`project-card ${isHighlighted ? 'highlighted' : ''}`}>
-      <div className="project-image-container">
-        {project.live ? (
-          <a href={project.live} target="_blank" rel="noreferrer">
-            <img
-              src={project.image || "/coming_soon.png"}
-              alt={project.title}
-              className="project-image"
-            />
-          </a>
-        ) : (
-          <img
-            src={project.image || "/coming_soon.png"}
-            alt={project.title}
-            className="project-image"
-          />
-        )}
-      </div>
-
       <div className="project-content">
         <div className="project-main-info">
           <p className="project-overline">{project.overline}</p>
