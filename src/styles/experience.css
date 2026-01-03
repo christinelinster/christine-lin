@@ -1,12 +1,8 @@
 /* --- Page Layout --- */
-.experience-container {
-  min-height: calc(100vh - 4rem);
-}
-
 .experience-content {
   max-width: 55rem;
   margin: 0 auto;
-  padding: 4rem 1rem;
+  padding: 4rem 1rem 6rem;
 }
 
 /* --- Section Styling --- */
@@ -15,15 +11,14 @@
 }
 
 .experience-header {
-  border-bottom: 2px solid var(--light-gray-border, #e5e7eb);
-  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--light-gray);
   margin-bottom: 2rem;
   display: flex;
   align-items: center;
 }
 
 .dark .experience-header {
-  border-bottom-color: var(--dark-gray-border, #374151);
+  border-bottom-color: var(--dark-gray);
 }
 
 

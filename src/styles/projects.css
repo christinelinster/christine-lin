@@ -2,7 +2,7 @@
 .projects-content {
   max-width: 80rem;
   margin: 0 auto;
-  padding: 3rem 0rem;
+  padding: 4rem 1rem 6rem;
 }
 .skills-section{
   display: none;
@@ -51,10 +51,5 @@
 @media (min-width: 1024px) {
   .projects-grid {
     grid-template-columns: repeat(3, 1fr);
-  }
-
-
-  .projects-content{
-      padding:3rem 1.5rem;
   }
 }

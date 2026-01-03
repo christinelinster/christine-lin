@@ -1,8 +1,4 @@
 /* --- Container & Layout --- */
-.about-container {
-  min-height: calc(100vh - 4rem);
-}
-
 .about-content {
   max-width: 55rem;
   margin: 0 auto;
@@ -10,7 +6,6 @@
 }
 
 /* --- Bio Section --- */
-
 
 .about-description {
   color: var(--primary-gray);
@@ -74,7 +69,7 @@
 
 /* --- Certifications Section --- */
 .certifications-section {
-  margin-top: 4rem; /* Handled in CSS now */
+  margin-top: 4rem;
 }
 
 .certifications-list {
@@ -114,10 +109,10 @@
 
 .cert-meta {
   font-family: var(--font-body, monospace);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--primary-gray);
-  opacity: 0.6; /* Using opacity instead of hardcoded hex for better theme support */
-  font-weight: 400;
+  opacity: 0.6;
+  font-weight: 300;
 }
 
 /* Interaction Effects */
@@ -133,7 +128,7 @@
 /* Icon Styling */
 .cert-arrow {
   color: var(--primary-gray);
-  opacity: 0.3; /* Subtle by default */
+  opacity: 0.3;
   transition: all 0.2s ease;
   flex-shrink: 0;
 }
@@ -167,7 +162,6 @@
 /* --- CTA Button --- */
 .about-cta-wrapper {
   padding-top: 3rem;
-  /* Removed border-top here to avoid double borders if you used one for skills */
   display: flex;
 }
 
@@ -175,12 +169,11 @@
   display: inline-flex;
   align-items: center;
   gap: 0.8rem;
-  font-family: var(--font-subheading);
   font-size: 1rem;
   font-weight: 500;
   color: var(--primary-purple);
   text-decoration: none;
-  padding: 0.8rem 2rem; /* Wider button */
+  padding: 0.8rem 2rem;
   border: 1px solid var(--primary-purple);
   border-radius: 4px;
   transition: all 0.2s ease;
@@ -192,14 +185,14 @@
 }
 
 .about-cta-button:hover {
-  background-color: var(--primary-purple);
-  color: white;
+  background-color: var(--light-purple);
+  color: var(--primary-white);
   transform: translateY(-2px);
+  box-shadow: 0 10px 20px -5px rgba(111, 106, 195, 0.3);
 }
 
 .dark .about-cta-button:hover {
-  background-color: var(--light-purple);
-  color: var(--bg-dark);
+  background-color: var(--dark-purple);
 }
 
 .about-cta-button .arrow {

@@ -17,7 +17,7 @@ export default function Contact() {
             </p>
 
             <a href="mailto:lin.christine19@gmail.com" className="primary-contact-btn">
-              Send Message <ArrowRight size={18} />
+              Send Message <span className="arrow">→</span>
             </a>
           </div>
 

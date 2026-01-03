@@ -32,7 +32,7 @@ export default function Projects() {
         </div>
 
         <div className="projects-section">
-          <h2 className="projects-title">{'/ My Projects'}</h2>
+          <h2 className="projects-title">{'/ Technical Projects'}</h2>
           <div className="projects-grid">
             {projects.map((project) => (
               <ProjectCard

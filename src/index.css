@@ -76,6 +76,7 @@ body {
 
 /* The general class used by every page */
 .container {
+  min-height: calc(100vh - 4rem);
   width: 100%;
   margin: 0 auto;
   padding: 0 1.5rem;
