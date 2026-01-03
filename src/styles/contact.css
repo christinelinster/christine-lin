@@ -18,7 +18,6 @@
   align-items: center;
 }
 
-/* Typography Enhancements */
 .contact-label {
   color: var(--primary-purple);
   margin-bottom: 1rem;
@@ -39,6 +38,7 @@
 
 .dark .contact-title {
   color: var(--highlight-silver);
+  opacity: 0.8;
 }
 
 .contact-description {
@@ -52,47 +52,6 @@
 .dark .contact-description {
   color: var(--light-text);
   opacity: 0.65;
-}
-
-/* Primary Button Styling */
-
-.primary-contact-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.8rem;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--primary-purple);
-  text-decoration: none;
-  padding: 0.8rem 2rem;
-  border: 1px solid var(--primary-purple);
-  border-radius: 4px;
-  transition: all 0.2s ease;
-}
-
-.dark .primary-contact-btn{
-   color: var(--light-purple);
-  border-color: var(--light-purple);
-}
-
-.primary-contact-btn:hover {
- background-color: var(--light-purple);
-  color: var(--primary-white);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px -5px rgba(111, 106, 195, 0.3);
-}
-
-.dark .primary-contact-btn:hover {
-  background-color: var(--dark-purple);
-}
-
-
-.primary-contact-btn .arrow {
-  transition: transform 0.2s ease;
-}
-
-.primary-contact-btn:hover .arrow {
-  transform: translateX(4px);
 }
 
 /* Sidebar Info Styling */

@@ -13,7 +13,7 @@
   --primary-white: #F0F0FE;
 
   /* Purple Palette */
-  --primary-purple: #6F6AC3;
+  --primary-purple: #9C95DC;
   --dark-purple: #292244;
   --light-purple: #806EBD;
   --highlight-silver: #CCD6F6;
@@ -51,7 +51,7 @@ body {
   overflow: hidden;
   font-family: var(--font-body);
   font-weight: 200;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   line-height: 1.6;
   overflow: hidden;
 }
@@ -80,29 +80,29 @@ body {
   width: 100%;
   margin: 0 auto;
   padding: 0 1.5rem;
-  transition: max-width 0.4s ease, padding 0.4s ease;
+  transition: max-width 0.3s ease, padding 0.3s ease;
   overflow: visible;
 }
 
 /* --- Scrollbar Appearance --- */
 
-  .main-content::-webkit-scrollbar {
-    width: 10px;
-  }
+.main-content::-webkit-scrollbar {
+  width: 10px;
+}
 
-  .main-content::-webkit-scrollbar-track {
-    margin-top: 4rem;
-    background: transparent;
-  }
+.main-content::-webkit-scrollbar-track {
+  margin-top: 4rem;
+  background: transparent;
+}
 
-  .main-content::-webkit-scrollbar-thumb {
-    background-color: var(--light-gray);
-    border-radius: 10px;
-  }
+.main-content::-webkit-scrollbar-thumb {
+  background-color: var(--light-gray);
+  border-radius: 10px;
+}
 
-  .dark .main-content::-webkit-scrollbar-thumb {
-    background-color: var(--primary-gray);
-  }
+.dark .main-content::-webkit-scrollbar-thumb {
+  background-color: var(--primary-gray);
+}
 
 @media (min-width: 1200px) {
   .container {
@@ -140,7 +140,7 @@ img {
 h2 {
   font-family: var(--font-subheading);
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--primary-purple);
   margin-bottom: 1.5rem;
   text-transform: uppercase;
@@ -156,7 +156,10 @@ h3 {
   letter-spacing: -0.3px;
 }
 
-.dark h2,
+.dark h2 {
+  color: var(--primary-purple);
+}
+
 .dark h3 {
   color: var(--highlight-silver);
 }
@@ -167,4 +170,59 @@ a {
   font-weight: 600;
   text-decoration: none;
   color: inherit;
+}
+
+.cta-button {
+  display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.9rem;
+  padding: 0.4rem 1rem;
+  background: transparent;
+  border-radius: 0.375rem;
+  color: var(--primary-purple);
+    text-decoration: none;
+    border: 1px solid var(--primary-purple);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+
+}
+
+@media (min-width: 640px) {
+
+  .cta-button {
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    padding: 0.8rem 2rem;
+
+  }
+}
+
+
+
+
+.dark .cta-button {
+  color: var(--light-purple);
+  border-color: var(--light-purple);
+}
+
+.cta-button:hover {
+  background-color: var(--primary-purple);
+  color: var(--primary-white);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -5px rgba(111, 106, 195, 0.3);
+}
+
+.dark .cta-button:hover {
+  background-color: var(--dark-purple);
+}
+
+.cta-button .arrow {
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover .arrow {
+  transform: translateX(4px);
 }

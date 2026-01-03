@@ -28,18 +28,3 @@
   flex-direction: column;
   gap: 1.5rem;
 }
-
-/* --- Mobile Responsiveness --- */
-@media (max-width: 768px) {
-  .experience-page-container {
-    padding: 2rem 1rem;
-  }
-
-  .section {
-    margin-bottom: 4rem;
-  }
-
-  .experience-list {
-    gap: 3rem;
-  }
-}

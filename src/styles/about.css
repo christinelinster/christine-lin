@@ -83,7 +83,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0; /* Increased padding for premium feel */
+  padding: 1rem 0;
   border-bottom: 1px solid var(--light-gray);
   text-decoration: none;
   transition: all 0.2s ease;
@@ -165,40 +165,3 @@
   display: flex;
 }
 
-.about-cta-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.8rem;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--primary-purple);
-  text-decoration: none;
-  padding: 0.8rem 2rem;
-  border: 1px solid var(--primary-purple);
-  border-radius: 4px;
-  transition: all 0.2s ease;
-}
-
-.dark .about-cta-button {
-  color: var(--light-purple);
-  border-color: var(--light-purple);
-}
-
-.about-cta-button:hover {
-  background-color: var(--light-purple);
-  color: var(--primary-white);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px -5px rgba(111, 106, 195, 0.3);
-}
-
-.dark .about-cta-button:hover {
-  background-color: var(--dark-purple);
-}
-
-.about-cta-button .arrow {
-  transition: transform 0.2s ease;
-}
-
-.about-cta-button:hover .arrow {
-  transform: translateX(4px);
-}

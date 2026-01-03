@@ -10,7 +10,7 @@ export default function Home() {
         <div>
           <p className="home-intro">Hi, my name is</p>
           <p className="home-name">Christine Lin, </p>
-          <p className="home-role">[ Software Engineer ]</p>
+          <p className="home-role">Software Engineer</p>
         </div>
         <div>
           <p className="home-description">
@@ -19,12 +19,12 @@ export default function Home() {
         </div>
         <div className="button-container">
           <div>
-            <Link to="/projects" className="cta primary-button">
+            <Link to="/projects" className="cta-button primary-button">
               View Projects
             </Link>
           </div>
           <div>
-            <Link to="/contact" className="cta secondary-button">
+            <Link to="/contact" className="cta-button secondary-button">
               Get In Touch
             </Link>
           </div>

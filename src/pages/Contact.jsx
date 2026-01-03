@@ -9,14 +9,14 @@ export default function Contact() {
 
           {/* Left Column: Message & Primary Action */}
           <div className="contact-main">
-            <h2 className="contact-label">Get In Touch</h2>
+            <h2 className="contact-label">/ Get In Touch</h2>
             <h1 className="contact-title">Let's build something <br/>together.</h1>
             <p className="contact-description">
               I'm open to software engineering opportunities and collaborations.
               Whether you're hiring, have a question, or just want to connect, I'd love to hear from you!
             </p>
 
-            <a href="mailto:lin.christine19@gmail.com" className="primary-contact-btn">
+            <a href="mailto:lin.christine19@gmail.com" className="cta-button">
               Send Message <span className="arrow">→</span>
             </a>
           </div>
