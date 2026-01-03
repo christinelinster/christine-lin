@@ -59,7 +59,7 @@
 
 .dark .home-name {
   color: var(--highlight-silver);
-  opacity: 0.8;
+
 }
 
 .dark .home-description {
@@ -87,10 +87,8 @@
   }
 
   .home-description {
-    font-family: var(--font-body);
     margin: 2rem 0;
     max-width: 28rem;
-    text-align: left;
   }
 
   .button-container {

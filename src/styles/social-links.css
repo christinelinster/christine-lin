@@ -69,7 +69,7 @@
     .email-link {
         font-family: var(--font-subheading);
         font-size: 0.85rem;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.1rem;
         color: var(--dark-text);
         text-decoration: none;
         transition: all 0.3s ease;

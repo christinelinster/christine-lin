@@ -14,12 +14,12 @@
 
 .role-overview {
   margin-top: 0.35rem;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
    color: var(--primary-gray);
 }
 
 .role-description li {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   margin-left: 1rem;
   margin-bottom: 0.35rem;
   color: var(--primary-gray);
@@ -33,7 +33,7 @@
 /* --- Typography --- */
 .role-title {
   font-family: var(--font-heading);
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--dark-purple);
   letter-spacing: -0.3px;
@@ -43,24 +43,26 @@
   color: var(--highlight-silver);
 }
 
-a.role-company:hover{
-  color: var(--dark-text);
-}
+
 
 .role-company {
   font-family: var(--font-subheading);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: var(--dark-text);
+  color: var(--light-purple);
   margin-top: 0.25rem;
 }
 
-
-.dark .role-company {
-  color: var(--light-purple);
+a.role-company:hover{
+  color: var(--primary-gray);
 }
+
+.dark a.role-company:hover{
+  color: var(--dark-text);
+}
+
 
 .role-description {
   font-family: var(--font-body);
@@ -107,6 +109,6 @@ a.role-company:hover{
 
 
 .link-arrow {
-  font-size: 0.8em;
+  font-size: 0.85rem;
   transform: translateY(-1px);
 }

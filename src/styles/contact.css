@@ -29,7 +29,7 @@
 
 .contact-title {
   font-family: var(--font-heading);
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: clamp(3rem, 5vw, 4rem);
   line-height: 1.1;
   font-weight: 600;
   margin-bottom: 2rem;
@@ -43,7 +43,7 @@
 
 .contact-description {
   max-width: 32rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.8;
   color: var(--primary-gray);
   margin-bottom: 3rem;
@@ -94,7 +94,7 @@
 
 .info-label {
   font-family: var(--font-subheading);
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.1em;

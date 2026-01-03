@@ -77,7 +77,7 @@ export default function About() {
         {/* SECTION 3: FOOTER CTA */}
         <div className="about-cta-wrapper">
           <Link to="/experience" className="cta-button">
-            View Professional History & Education <span className="arrow">→</span>
+            View Experience & Education <span className="arrow">→</span>
           </Link>
         </div>
       </div>

@@ -34,7 +34,6 @@
 
 .about-skills-title {
   font-family: var(--font-subheading);
-  font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--primary-purple);
@@ -48,7 +47,7 @@
 
 .skill-category-title {
   font-family: var(--font-subheading);
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--primary-gray);
@@ -109,7 +108,7 @@
 
 .cert-meta {
   font-family: var(--font-body, monospace);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: var(--primary-gray);
   opacity: 0.6;
   font-weight: 300;
