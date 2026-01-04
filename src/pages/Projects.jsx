@@ -5,10 +5,17 @@ import projects from "../data/projects";
 import '../styles/projects.css';
 
 export default function Projects() {
-  const [highlightedSkill, setHighlightedSkill] = useState(null);
+  const [highlightedSkill, setHighlightedSkill] = useState([]);
 
   const handleSkillClick = (skill) => {
-    setHighlightedSkill(highlightedSkill === skill ? null : skill);
+    const skillSelected = highlightedSkill.includes(skill)
+
+    if (skillSelected){
+      const filteredSkills = highlightedSkill.filter( currentSkill => currentSkill !== skill)
+      setHighlightedSkill(filteredSkills)
+    } else {
+      setHighlightedSkill(prevSkills => [...prevSkills, skill])
+    }
   };
 
   const allSkills = [
@@ -25,7 +32,7 @@ export default function Projects() {
                 key={skill}
                 name={skill}
                 onClick={() => handleSkillClick(skill)}
-                isHighlighted={skill === highlightedSkill}
+                isHighlighted={highlightedSkill.includes(skill)}
               />
             ))}
           </div>

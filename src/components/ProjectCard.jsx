@@ -3,7 +3,7 @@ import SkillTag from './SkillTag';
 import '../styles/project-card.css';
 
 export default function ProjectCard({ project, onSkillClick, highlightedSkill }) {
-  const isHighlighted = highlightedSkill && project.skills.includes(highlightedSkill);
+  const isHighlighted = highlightedSkill && project.skills.some(skill => highlightedSkill.includes(skill));
 
   return (
     <div className={`project-card ${isHighlighted ? 'highlighted' : ''}`}>
@@ -22,7 +22,7 @@ export default function ProjectCard({ project, onSkillClick, highlightedSkill })
                 key={skill}
                 name={skill}
                 onClick={() => onSkillClick(skill)}
-                isHighlighted={skill === highlightedSkill}
+                isHighlighted={highlightedSkill.includes(skill)}
               />
             ))}
           </div>
