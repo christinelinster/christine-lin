@@ -24,7 +24,7 @@ const projects = [
       live: null,
     },
         {
-          overline: "Small Project",
+          overline: "Project",
       title: "Content Management System",
       description: "A Python-based Content Management System (CMS) featuring a comprehensive unit test suite to ensure system reliability. Implements session-based flash messaging, secure admin authentication, and a file-based storage engine wrapped in a Flask web interface.",
       skills: ["Python", "Flask", "Test-Driven Development"],

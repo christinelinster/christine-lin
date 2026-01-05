@@ -7,11 +7,13 @@ import Contact from './pages/Contact';
 import { ThemeProvider } from './context/ThemeContext';
 import SocialLinks from './components/SocialLinks';
 import Experience from './pages/Experience';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <ThemeProvider>
       <Router>
+        <ScrollToTop/>
         <Navbar />
         <main className="main-content">
           <Routes>
