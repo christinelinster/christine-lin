@@ -32,7 +32,7 @@ export default function ProjectCard({ project, onSkillClick, highlightedSkill })
           <a href={project.github} target="_blank" rel="noopener noreferrer" className={`project-link ${!project.github ? 'disabled' : ''}`} onClick={(e) => !project.github && e.preventDefault()} aria-label="GitHub Repository">
             <Github className="project-link-icon" />
           </a>
-          <a href={project.live} target="_blank" rel="noopener noreferrer" className={`project-link ${!project.live ? 'disabled' : ''}`} onClick={(e) => !project.github && e.preventDefault()} aria-label="Live Demo">
+          <a href={project.live} target="_blank" rel="noopener noreferrer" className={`project-link ${!project.live ? 'disabled' : ''}`} onClick={(e) => !project.live && e.preventDefault()} aria-label="Live Demo">
             <ExternalLink className="project-link-icon" />
           </a>
         </div>
